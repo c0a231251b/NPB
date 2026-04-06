@@ -51,7 +51,7 @@ https://baseball.yahoo.co.jp/npb/game/2021038675/text
 ### game_2021038670_text.json
     - test.pyを実行した際に、タイトル・更新時刻・スコア・各打席テキストで入ったJSONを出力できることを確認済み
 
-##　後で消す
+## 後で消す
 
 
 
