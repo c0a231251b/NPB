@@ -49,9 +49,13 @@ https://baseball.yahoo.co.jp/npb/game/2021038675/text
 - hoge3.pyを追加実装。特定のチームの打順を評価する関数を作成する
 
 ### game_2021038670_text.json
-    - test.pyを実行した際に、タイトル・更新時刻・スコア・各打席テキストで入ったJSONを出力できることを確認済み
+- test.pyを実行した際に、タイトル・更新時刻・スコア・各打席テキストで入ったJSONを出力できることを確認済み
 
 ## 後で消す
+
+
+<img width="488" height="595" alt="image" src="https://github.com/user-attachments/assets/165781cf-89bf-4f5e-b4f2-b881c64ca558" />
+
 
 
 
