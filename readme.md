@@ -243,6 +243,8 @@ DEBUG: 岡本和の成績ベクトル -> [0.24426406173955365, 0.304558788551494
 |model_arch.py|モデル構造定義(PyTorch)|
 |train_model.py|RNN/LSTMの学習実行|
 |order_simulator.py|打順評価シミュレーター|
+|at_bats.py|JSONデータの総打席数をカウントする|
+|data_explorer.py|JSONデータ分析|
 
 
 ## 後で消す
