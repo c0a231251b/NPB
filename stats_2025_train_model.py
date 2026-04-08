@@ -15,63 +15,63 @@ import pandas as pd
 
 class PlayerStatsDB:
     def __init__(self, csv_path):
-        # 1. CSVを読み込む (team, name カラムがある前提)
         df = pd.read_csv(csv_path)
         
-        # 2. リーグ平均行を保持
         if 'LEAGUE_AVERAGE' in df['name'].values:
             avg_row = df[df['name'] == 'LEAGUE_AVERAGE'].iloc[0]
             self.league_avg = avg_row.to_dict()
         else:
             self.league_avg = {"AB": 100, "H": 25, "TB": 35, "BB": 10, "HBP": 1, "SF": 2}
         
-        # 3. 球団別の選手辞書を作成
         players_df = df[df['name'] != 'LEAGUE_AVERAGE'].copy()
-        # 名前のスペース除去
         players_df['name'] = players_df['name'].str.replace(r'\s+', '', regex=True)
         
-        # self.db[球団名][選手名] = 成績 という2層構造にする
         self.db = {}
         for _, row in players_df.iterrows():
-            t = row['team']
+            # 球団名を正規化（全角を半角にするなど）して格納
+            t = self.normalize_team_name(row['team'])
             n = row['name']
             if t not in self.db:
                 self.db[t] = {}
-            # 同一球団内に同名がいる場合は数値を合算（移籍等）
+            
             if n in self.db[t]:
                 for col in ["AB", "H", "2B", "3B", "HR", "TB", "BB", "HBP", "SF"]:
                     self.db[t][n][col] += row[col]
             else:
                 self.db[t][n] = row.to_dict()
 
+    def normalize_team_name(self, name):
+        """球団名の表記揺れ（DeNAの全角/半角など）を統一する"""
+        # 全角のＤｅＮＡを半角に、あるいはその逆を考慮
+        return name.replace("ＤｅＮＡ", "DeNA").replace("巨 人", "巨人")
+
     def clean_name(self, name):
-        """名前から全角・半角スペースを除去"""
         return name.replace(" ", "").replace("　", "")
 
     def get_vector(self, name, team_name):
-        """
-        選手名と球団名から特徴ベクトルを生成。名字のみでも同じ球団内から特定する。
-        """
         target_name = self.clean_name(name)
-        team_data = self.db.get(team_name, {})
+        # 検索時も球団名を正規化
+        norm_team = self.normalize_team_name(team_name)
         
-        # 1. 指定された球団内で完全一致を検索
+        # チームが存在しない場合は空の辞書をデフォルトにする（KeyError防止）
+        if norm_team not in self.db:
+            self.db[norm_team] = {}
+        
+        team_data = self.db[norm_team]
+        
         if target_name in team_data:
             s = team_data[target_name]
         else:
-            # 2. 指定された球団内で名字マッチング（前方一致検索）
             matches = [full for full in team_data.keys() if full.startswith(target_name)]
             if matches:
-                # チーム内に「佐藤」が複数いる場合は、2025年の打数(AB)が多い方を優先
                 best = max(matches, key=lambda m: team_data[m].get("AB", 0))
                 s = team_data[best]
-                # キャッシュして次回から高速化
                 team_data[target_name] = s 
             else:
-                # 3. その球団で見つからない場合のみリーグ平均
-                s = self.league_avg
+                s = self.league_avg.copy()
+                # 安全に代入
+                self.db[norm_team][target_name] = s 
         
-        # 指標計算
         ab, h, bb, hbp, sf, tb = s.get("AB",0), s.get("H",0), s.get("BB",0), s.get("HBP",0), s.get("SF",0), s.get("TB",0)
         avg = h / ab if ab > 0 else 0.0
         denom = (ab + bb + hbp + sf)
