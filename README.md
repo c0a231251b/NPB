@@ -235,16 +235,19 @@ DEBUG: 岡本和の成績ベクトル -> [0.24426406173955365, 0.304558788551494
 ### python
 |ファイル名|概要|
 |---|---|
-|scraper_sample.py|1試合のスクレイピング|
-|parser_utils.py|選手名の正規表現パース|
-|npb_bulk_scraper.py|NPB全試合の一括取得(完成版)|
-|text_pattern_analyzer.py|テキスト表現の分析|
-|fature_engineering.py|累積成績(特徴量)作成|
-|model_arch.py|モデル構造定義(PyTorch)|
-|train_model.py|RNN/LSTMの学習実行|
-|order_simulator.py|打順評価シミュレーター|
-|at_bats.py|JSONデータの総打席数をカウントする|
-|data_explorer.py|JSONデータ分析|
+|2025_initial_stats_scraper.py|NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
+|at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
+|data_explorer.py|学習データの品質を診断する分析スクリプトで、得点分布・選手データのカバー率・特徴ベクトルのレンジを出力|
+|fature_engineering.py|試合JSONから打席結果を累積しながら、スタメン打順の成績ベクトルと得点をセットにした学習データを構築するスクリプト|
+|model_arch.py|スタメン打順の成績ベクトルを入力にLSTMで得点を予測する回帰モデルを定義・学習するコード|
+|npb_bulk_scraper.py|Yahoo!野球のNPB試合テキスト中継ページをスクレイピングし、スコアボードと打席情報をJSON形式で保存するスクリプト(公式戦)|
+|op_npb_bulk_scraper.py|Yahoo!野球のNPB試合テキスト中継ページをスクレイピングし、スコアボードと打席情報をJSON形式で保存するスクリプト(OP戦)|
+|order_simulator.py|試合JSONからデータ構築・LSTM学習・打順最適化シミュレーションまでを一括実行する統合スクリプト|
+|parser_utils.py|特定の1試合のYahoo!野球テキスト中継をスクレイピングしてJSONに保存する動作確認用スクリプト|
+|scraper_sample.py|試合前情報のパース処理を省いた、スコアボードと打席テキストのみを取得する簡略版スクレイパー|
+|stats_2025_train_model.py|2025年の実績CSVを初期値として球団別に選手を管理し、2026年試合データで累積更新しながらLSTMで打順の得点を予測・比較するシステム|
+|text_pattern_analyzer.py|試合JSONから打席結果テキストを収集し、頻出表現をランキング表示する分析スクリプト|
+|train_model.py|累積成績から打順ベクトルを生成してLSTMで得点を予測する、データ構築から学習までの一連のパイプライン|
 
 ### データ
 |ファイル名|概要|
