@@ -59,6 +59,8 @@ class PlayerStatsDB:
         
         team_data = self.db[norm_team]
         
+        # 1. 自チーム内で検索(完全一致or名字マッチング)
+        s = None
         if target_name in team_data:
             s = team_data[target_name]
         else:
@@ -66,11 +68,25 @@ class PlayerStatsDB:
             if matches:
                 best = max(matches, key=lambda m: team_data[m].get("AB", 0))
                 s = team_data[best]
-                team_data[target_name] = s 
+                
+        # 2. 【移籍対策】自チームで見つからない場合、他チーム（全DB）を捜索
+        if s is None:
+            all_matches = []
+            for other_team, players in self.db.items():
+                for full_name, stats in players.items():
+                    # 名字またはフルネームで一致するかチェック
+                    if full_name.startswith(target_name) or target_name == full_name:
+                        all_matches.append(stats)
+            
+            if all_matches:
+                # リーグ全体で最も実績（打数）がある選手を採用
+                s = max(all_matches, key=lambda x: x.get("AB", 0))
+                # 発見したデータを、現在のチームのキャッシュに保存（移籍完了として扱う）
+                self.db[norm_team][target_name] = s
             else:
+                # 3. リーグ全体を探してもいない場合のみ、本当の新規選手（リーグ平均）
                 s = self.league_avg.copy()
-                # 安全に代入
-                self.db[norm_team][target_name] = s 
+                self.db[norm_team][target_name] = s
         
         ab, h, bb, hbp, sf, tb = s.get("AB",0), s.get("H",0), s.get("BB",0), s.get("HBP",0), s.get("SF",0), s.get("TB",0)
         avg = h / ab if ab > 0 else 0.0
