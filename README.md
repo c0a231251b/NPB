@@ -252,6 +252,10 @@ DEBUG: 岡本和の成績ベクトル -> [0.24426406173955365, 0.304558788551494
 |stats_2025_train_model.py|2025年の実績CSVを初期値として球団別に選手を管理し、2026年試合データで累積更新しながらLSTMで打順の得点を予測・比較するシステム|
 |text_pattern_analyzer.py|試合JSONから打席結果テキストを収集し、頻出表現をランキング表示する分析スクリプト|
 |train_model.py|累積成績から打順ベクトルを生成してLSTMで得点を予測する、データ構築から学習までの一連のパイプライン|
+|visualize_average_contribution.py|1試合あたりの平均的な貢献度を可視化|
+|visualize_specific_game.py|特定の1試合の詳細な貢献度を可視化|
+|visualize_total_contribution.py|全試合の合計得点貢献を可視化|
+
 
 [コード詳細](https://hackmd.io/@Q6DZToC7RdeE3EFOW2XCAg/SkzxHR7hWe/edit)
 
