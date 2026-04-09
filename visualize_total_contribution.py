@@ -11,7 +11,8 @@ def analyze_total_contribution(json_dir):
     os.makedirs(save_dir, exist_ok=True)
 
     records = []
-    score_re = re.compile(r"(\d+)-(\d+)")
+    # チーム名に挟まれたスコアのみを抽出する正規表現に強化
+    score_re = re.compile(r"[A-Za-z0-9一-龠ぁ-んァ-ヶ]+\s+(\d+)-(\d+)\s+[A-Za-z0-9一-龠ぁ-んァ-ヶ]+")
     batter_re = re.compile(r"(\d+)番")
     
     file_paths = glob.glob(os.path.join(json_dir, "*.json"))
