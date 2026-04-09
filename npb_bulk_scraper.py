@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 # --- 設定 ---
 START_ID = 2021038622
-END_ID = 2021038687 
+END_ID   = 2021038692 
 OUTPUT_DIR = "game_data"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
