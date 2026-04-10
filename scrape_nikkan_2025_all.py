@@ -117,5 +117,5 @@ class CalendarNikkanScraper:
 if __name__ == "__main__":
     scraper = CalendarNikkanScraper()
     # アップロードされた2つのファイルを指定
-    files = ["日程ナビ URL セリーグ.txt", "日程ナビ URL パリーグ.txt"]
+    files = ["url_list/Schedule_Nav_URL_Central_League.txt", "url_list/Schedule_Nav_URL_Pacific_League.txt"]
     scraper.run(files)
