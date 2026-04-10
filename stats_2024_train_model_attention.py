@@ -118,32 +118,44 @@ def build_dataset(json_dir, csv_path):
     
     for path in file_paths:
         with open(path, "r", encoding="utf-8") as f:
-            game = json.load(f)
+            try:
+                game = json.load(f)
+            except json.JSONDecodeError: continue
         
         try:
             teams = [t["team"] for t in game["scoreboard"]]
             scores = [int(re.search(r'\d+', t["R"]).group()) for t in game["scoreboard"]]
         except: continue
 
-        # 各チームの学習サンプル作成
         for team_idx, team_name in enumerate(teams):
             try:
-                lineup = game["text_live"][0]["pregame"]["lineups"][team_idx]["players"][:9]
+                # スタメン取得
+                players = game["text_live"][0]["pregame"]["lineups"][team_idx]["players"]
+                
+                # --- 【ここが修正ポイント】 ---
+                # 9人揃っていないデータは学習から除外する
+                if len(players) < 9:
+                    # print(f"  Skip: {os.path.basename(path)} のスタメンが不足しています")
+                    continue
+                
+                lineup = players[:9]
                 lineup_vectors = [stats_db.get_vector(name, team_name) for name in lineup]
-                dataset.append({"lineup_vectors": lineup_vectors, "score": scores[team_idx]})
+                
+                # 全員のベクトルが正しく4要素であることも確認
+                if all(len(v) == 4 for v in lineup_vectors):
+                    dataset.append({"lineup_vectors": lineup_vectors, "score": scores[team_idx]})
+                # -----------------------------
+                
             except: continue
         
-        # 試合経過で打者の能力値をリアルタイム更新（次戦の予測に活かす）
+        # 試合中の成績更新処理（ここは変更なし）
         for section in game.get("text_live", []):
             inning = section.get("inning", "")
             if "回" not in inning: continue
             current_team = teams[0] if "表" in inning else teams[1]
-            
             for play in section.get("plays", []):
                 lines = play.get("lines", [])
-                if len(lines) < 2: continue # 名前と結果の2行構成を確認
-                
-                # 「1番 西川」をパース
+                if len(lines) < 2: continue
                 match = re.match(r"(\d+)番\s+(.+)", lines[0])
                 if match:
                     p_name = match.group(2)
@@ -226,5 +238,5 @@ if __name__ == "__main__":
                 print(f"Epoch [{epoch+1}/100], MSE: {total_loss/len(loader):.4f}")
 
         # 巨人軍の現行オーダー等で可視化テスト
-        test_lineup = ["若林", "キャベッジ", "吉川", "岡本", "田中瑛", "横川", "ヘルナンデス", "オコエ", "中山"]
+        test_lineup = ["坂本", "丸", "ヘルナンデス", "吉川", "岡本", "オコエ", "小林", "門脇", "菅野"]
         visualize_ai_attention(model, stats_db, "巨人", test_lineup)
