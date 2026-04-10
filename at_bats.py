@@ -59,17 +59,22 @@ def main() -> None:
         return
 
     grand_total = 0
-    for path in paths:
-        with open(path, "r", encoding="utf-8") as f:
-            game = json.load(f)
 
-        at_bats = count_at_bats_in_game(game)
-        grand_total += at_bats
-        print(f"{os.path.basename(path)}: {at_bats}打席")
+    # 追加：出力ファイルを開く
+    with open("result.txt", "w", encoding="utf-8") as out:
+        for path in paths:
+            with open(path, "r", encoding="utf-8") as f:
+                game = json.load(f)
 
-    print("-" * 40)
-    print(f"対象ファイル数: {len(paths)}")
-    print(f"総打席数: {grand_total}")
+            at_bats = count_at_bats_in_game(game)
+            grand_total += at_bats
+
+            # printの代わりに file=out を使う
+            print(f"{os.path.basename(path)}: {at_bats}打席", file=out)
+
+        print("-" * 40, file=out)
+        print(f"対象ファイル数: {len(paths)}", file=out)
+        print(f"総打席数: {grand_total}", file=out)
 
 if __name__ == "__main__":
     main()
