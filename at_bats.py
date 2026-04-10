@@ -3,7 +3,7 @@ import json
 import os
 
 
-JSON_DIR = "game_data"
+JSON_DIR = "game_data" # JSONファイルが保存されているディレクトリ
 
 
 def count_at_bats_in_game(game: dict) -> int:
