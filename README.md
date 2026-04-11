@@ -9,8 +9,7 @@
 ### 2. データ確認
 - at_bats.py →ファイル数/総打席数を確認
 ### 3. 学習
-- stats_2024_train_model_attention.py
-- stats_2024_train_model_attention_final.py	
+- game_score_lstm.py 
 
 
 ## ファイル概要
@@ -22,6 +21,7 @@
 |at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
 |data_explorer.py|学習データの品質を診断する分析スクリプトで、得点分布・選手データのカバー率・特徴ベクトルのレンジを出力|
 |fature_engineering.py|試合JSONから打席結果を累積しながら、スタメン打順の成績ベクトルと得点をセットにした学習データを構築するスクリプト|
+|game_score_lstm.py|打率・本塁打・長打率・OPSの4指標を動的に更新しながら標準LSTMで得点を予測し、結果をタイムスタンプ付きファイルに保存するスクリプト|
 |model_arch.py|スタメン打順の成績ベクトルを入力にLSTMで得点を予測する回帰モデルを定義・学習するコード|
 |npb_bulk_scraper.py|Yahoo!野球のNPB試合テキスト中継ページをスクレイピングし、スコアボードと打席情報をJSON形式で保存するスクリプト(公式戦)|
 |op_npb_bulk_scraper.py|Yahoo!野球のNPB試合テキスト中継ページをスクレイピングし、スコアボードと打席情報をJSON形式で保存するスクリプト(OP戦)|
