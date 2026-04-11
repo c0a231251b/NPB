@@ -1,81 +1,119 @@
 # NPB
-
-# 書かないといけない項目（いずれ消す→まじ）
-- 概要　（なんのプロジェクト化）
-- 実行手順　（動かす順番）
-- ファイル概要(python,data)　（）
-- 対象データ　（データの出典,フォーマット(csv,json)、カラム説明）
-- その他
-
-```
-# プロジェクト名
-
 ## 概要
-このプロジェクトは〜
+打席履歴と投手の特徴量を用いた打順最適化を行う.
 
 ## 実行手順
-1. ライブラリインストール
-2. コマンド実行
+### 1. データを取得
+- 2024_initial_stats_scraper.py → initial_stats_2024.csv
+- scrape_nikkan_2025_all.py → game_data_2025/.json
+### 2. データ確認
+- at_bats.py →ファイル数/総打席数を確認
+### 3. 学習
+- stats_2024_train_model_attention.py
+- stats_2024_train_model_attention_final.py	
+
 
 ## ファイル概要
 ### python
+|ファイル名|概要|
+|---|---|
+|2024_initial_stats_scraper.py|2024年NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
+|2025_initial_stats_scraper.py|2025年NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
+|at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
+|data_explorer.py|学習データの品質を診断する分析スクリプトで、得点分布・選手データのカバー率・特徴ベクトルのレンジを出力|
+|fature_engineering.py|試合JSONから打席結果を累積しながら、スタメン打順の成績ベクトルと得点をセットにした学習データを構築するスクリプト|
+|model_arch.py|スタメン打順の成績ベクトルを入力にLSTMで得点を予測する回帰モデルを定義・学習するコード|
+|npb_bulk_scraper.py|Yahoo!野球のNPB試合テキスト中継ページをスクレイピングし、スコアボードと打席情報をJSON形式で保存するスクリプト(公式戦)|
+|op_npb_bulk_scraper.py|Yahoo!野球のNPB試合テキスト中継ページをスクレイピングし、スコアボードと打席情報をJSON形式で保存するスクリプト(OP戦)|
+|order_simulator.py|試合JSONからデータ構築・LSTM学習・打順最適化シミュレーションまでを一括実行する統合スクリプト|
+|parser_utils.py|特定の1試合のYahoo!野球テキスト中継をスクレイピングしてJSONに保存する動作確認用スクリプト|
+|scraper_sample.py|試合前情報のパース処理を省いた、スコアボードと打席テキストのみを取得する簡略版スクレイパー|
+|stats_2024_train_model_attention.py|スタメン9人未満のデータを除外するバリデーションを追加した、LSTM+Attention打順予測モデルの改良版|
+|stats_2024_train_model_attention_final.py|双方向LSTM＋Attentionモデル|
+|stats_2025_train_model.py|2025年の実績CSVを初期値として球団別に選手を管理し、2026年試合データで累積更新しながらLSTMで打順の得点を予測・比較するシステム|
+|stats_2025_train_model_attention.py|LSTMにAttention機構を追加し、打順ごとの重要度を可視化できるように拡張したモデル|
+|text_pattern_analyzer.py|試合JSONから打席結果テキストを収集し、頻出表現をランキング表示する分析スクリプト|
+|train_model.py|累積成績から打順ベクトルを生成してLSTMで得点を予測する、データ構築から学習までの一連のパイプライン|
+|visualize_average_contribution.py|1試合あたりの平均的な貢献度を可視化|
+|visualize_specific_game.py|特定の1試合の詳細な貢献度を可視化|
+|visualize_total_contribution.py|全試合の合計得点貢献を可視化|
+
 ### data
+|ファイル名|概要|
+|---|---|
+|game_data|2026年度打席履歴|
+|game_data_2025|2025年度打席履歴|
+|graph_data|グラフ保存用フォルダー|
+|url_list|日程ナビURLリストの保存先|
+|game_2021038670_text.json|4/5読売ジャイアンツvs.横浜DeNAベイスターズ試合テキスト速報|
+|initial_stats_2024.csv|2024年度個人打撃成績|
+|initial_stats_2025.csv|2025年度個人打撃成績|
+
+## 野球用語
+### 使用する用語一覧
+|用語|それ|
+|---|---|
+|AVG|打率|
+|OBP|出塁率|
+|SLG|長打率|
+|OPS|打撃指標数|
+
+### 詳細
+#### AVG
+$$
+AVG = \frac{H}{AB}
+$$
+
+$$
+打率 = \frac{安打}{打数}
+$$
+
+#### OBP
+$$
+OBP = \frac{H + BB + HBP}{AB + BB + HBP + SF}
+$$
+
+$$
+OBP = \frac{安打 + 四球 + 死球}{打数 + 四球 + 死球 + 犠飛}
+$$
+
+##### SLG
+$$
+SLG = \frac{TB}{AB}
+$$
+
+$$
+SLG = \frac{塁打}{打数}
+$$
+
+##### OPS
+$$
+OSP = \frac{OBP}{SLG}
+$$
+
+$$
+OSP = \frac{出塁率}{長打率}
+$$ 
 
 ## 対象データ
-
-```
-
-
-## 対象データ
-
-NPB(2026/3/27~2026/4/05)全試合(53試合×2チーム)=106サンプルの打撃成績結果
-> データサンプル少なすぎる問題発生.→ほな,OP戦も入れちゃおう!!!
-
-NPB(2026/2/21~2026/4/05)全試合(153試合×2チーム)=306サンプルの打撃成績結果
-> 追加したよ
-
-NPB(2026/2/21~2026/4/09)全試合(169試合×2チーム)=338,総打席数12318サンプルの打撃成績結果
-> 追加したよ
-
-
-
-## 作業した手順
-1. まず、1試合だけスクレイピングを成功させよう
-test.py,test1.pyで実装
-
-2. 対象データ全試合データを取得
-test2.pyで実装
-以下のURLID間をループするスクリプトを作成する。
+### ソース元
+#### 2024年度個人打撃成績
 ```txt=
-https://baseball.yahoo.co.jp/npb/game/2021038622/text
-https://baseball.yahoo.co.jp/npb/game/2021038675/text
-
-START_ID = 2021038622
-END_ID = 2021038675
+https://npb.jp/bis/2024/stats/idb1_g.html
+https://npb.jp/bis/2024/stats/idb1_t.html
+https://npb.jp/bis/2024/stats/idb1_db.html
+https://npb.jp/bis/2024/stats/idb1_c.html
+https://npb.jp/bis/2024/stats/idb1_s.html
+https://npb.jp/bis/2024/stats/idb1_d.html
+https://npb.jp/bis/2024/stats/idb1_h.html
+https://npb.jp/bis/2024/stats/idb1_f.html
+https://npb.jp/bis/2024/stats/idb1_m.html
+https://npb.jp/bis/2024/stats/idb1_e.html
+https://npb.jp/bis/2024/stats/idb1_b.html
+https://npb.jp/bis/2024/stats/idb1_l.html
 ```
-3. 教師データとして学習に用いる「試合当日までの累積成績」を取得
-- test2.pyで得た対象データから、打席結果の表現をリストアップすることをhoge.pyで実装
-- hoge1.py時系列累積処理の実装 →うまく行かない
-- hoge2.pyPyTorchによる実装コード →うまく行かない
-- hoge3.py打順最適化 RNN（LSTM）学習スクリプト（完全版）
-
-
-4. OP戦の成績を追加
-データサンプルが少ないため,OP戦のデータをスクレイピング.op_npb_bulk_scraper.pyで実装.
-```txt=
-https://baseball.yahoo.co.jp/npb/game/2021040014/top
-https://baseball.yahoo.co.jp/npb/game/2021040114/top
-
-START_ID = 2021040014
-END_ID = 2021040114
-```
-
-5. 数値改善のために2025年度成績を取得
-- 現状初期値が0のため制度が低い.NPB公式サイトから2025年度の個人打撃成績(725名)を取集し,初期値として組み込ませることで改善できるはず
-2025_initial_stats_scraper.pyで実装
-
-使用するデータ先
-```txt=
+#### 2025年度個人打撃成績
+```txt
 https://npb.jp/bis/2025/stats/idb1_g.html
 https://npb.jp/bis/2025/stats/idb1_t.html
 https://npb.jp/bis/2025/stats/idb1_db.html
@@ -90,267 +128,85 @@ https://npb.jp/bis/2025/stats/idb1_b.html
 https://npb.jp/bis/2025/stats/idb1_l.html
 ```
 
-6. 2025年度成績の組み込みバージョンの実装
-2025年度個人打撃成績(initial_stats_2025.csv)を組み込んだstats_2025_train_model.pyを実装.
-
-- 実装結果(1):Epochを100
-```txt=
-データセット構築中（2025年実績ロード中）...
-学習開始... (サンプル数: 306)
-Epoch [20/100], MSE: 7.4085
-Epoch [40/100], MSE: 7.6623
-Epoch [60/100], MSE: 7.1591
-Epoch [80/100], MSE: 7.4490
-Epoch [100/100], MSE: 7.5074
-DEBUG: 岡本和の成績ベクトル -> [0.24426406173955365, 0.30455878855149443, 0.35079607870402557, 0.10653201696447193]
-
---- 打順評価結果 (2025実績反映版) ---
-実際の打順予測得点: 3.21
-出塁率降順予測得点: 3.21
-期待上昇スコア: -0.00
-```
-- 実装結果(2):Epochを500
-```txt=
-データセット構築中（2025年実績ロード中）...
-学習開始... (サンプル数: 306)
-Epoch [20/500], MSE: 7.2835
-Epoch [40/500], MSE: 7.3672
-Epoch [60/500], MSE: 7.2808
-Epoch [80/500], MSE: 8.7870
-Epoch [100/500], MSE: 7.3245
-Epoch [120/500], MSE: 7.9307
-Epoch [140/500], MSE: 7.3175
-Epoch [160/500], MSE: 7.4373
-Epoch [180/500], MSE: 7.4589
-Epoch [200/500], MSE: 8.6874
-Epoch [220/500], MSE: 7.3035
-Epoch [240/500], MSE: 7.2376
-Epoch [260/500], MSE: 7.3111
-Epoch [280/500], MSE: 7.4482
-Epoch [300/500], MSE: 7.2191
-Epoch [320/500], MSE: 7.2240
-Epoch [340/500], MSE: 7.1833
-Epoch [360/500], MSE: 7.1281
-Epoch [380/500], MSE: 7.3347
-Epoch [400/500], MSE: 7.3318
-Epoch [420/500], MSE: 10.3801
-Epoch [440/500], MSE: 7.0310
-Epoch [460/500], MSE: 7.0347
-Epoch [480/500], MSE: 7.3259
-Epoch [500/500], MSE: 6.8896
-DEBUG: 岡本和の成績ベクトル -> [0.24426406173955365, 0.30455878855149443, 0.35079607870402557, 0.10653201696447193]
-
---- 打順評価結果 (2025実績反映版) ---
-実際の打順予測得点: 2.76
-出塁率降順予測得点: 2.98
-期待上昇スコア: 0.21
+#### 2025年度打撃履歴
+```txt
+https://www.nikkansports.com/baseball/professional/schedule/cl03.html
+https://www.nikkansports.com/baseball/professional/schedule/cl04.html
+https://www.nikkansports.com/baseball/professional/schedule/cl05.html
+https://www.nikkansports.com/baseball/professional/schedule/cl06.html
+https://www.nikkansports.com/baseball/professional/schedule/cl07.html
+https://www.nikkansports.com/baseball/professional/schedule/cl08.html
+https://www.nikkansports.com/baseball/professional/schedule/cl09.html
+https://www.nikkansports.com/baseball/professional/schedule/cl10.html
+https://www.nikkansports.com/baseball/professional/schedule/pl03.html
+https://www.nikkansports.com/baseball/professional/schedule/pl04.html
+https://www.nikkansports.com/baseball/professional/schedule/pl05.html
+https://www.nikkansports.com/baseball/professional/schedule/pl06.html
+https://www.nikkansports.com/baseball/professional/schedule/pl07.html
+https://www.nikkansports.com/baseball/professional/schedule/pl08.html
+https://www.nikkansports.com/baseball/professional/schedule/pl09.html
+https://www.nikkansports.com/baseball/professional/schedule/pl10.html
 ```
 
-
-- 実装結果(3):Epochを2000
-```txt=
-データセット構築中（2025年実績ロード中）...
-学習開始... (サンプル数: 306)
-Epoch [20/2000], MSE: 7.1525
-Epoch [40/2000], MSE: 7.4771
-Epoch [60/2000], MSE: 7.4090
-Epoch [80/2000], MSE: 7.2251
-Epoch [100/2000], MSE: 7.2169
-Epoch [120/2000], MSE: 7.2928
-Epoch [140/2000], MSE: 7.2960
-Epoch [160/2000], MSE: 7.2572
-Epoch [180/2000], MSE: 7.3919
-Epoch [200/2000], MSE: 7.2235
-Epoch [220/2000], MSE: 7.6798
-Epoch [240/2000], MSE: 7.2517
-Epoch [260/2000], MSE: 7.2237
-Epoch [280/2000], MSE: 7.3968
-Epoch [300/2000], MSE: 7.6836
-Epoch [320/2000], MSE: 7.2173
-Epoch [340/2000], MSE: 7.5414
-Epoch [360/2000], MSE: 7.4489
-Epoch [380/2000], MSE: 7.4390
-Epoch [400/2000], MSE: 7.3319
-Epoch [420/2000], MSE: 7.1195
-Epoch [440/2000], MSE: 7.4484
-Epoch [460/2000], MSE: 7.2390
-Epoch [480/2000], MSE: 7.0916
-Epoch [500/2000], MSE: 7.3291
-Epoch [520/2000], MSE: 6.9428
-Epoch [540/2000], MSE: 7.1160
-Epoch [560/2000], MSE: 6.9920
-Epoch [580/2000], MSE: 6.9310
-Epoch [600/2000], MSE: 7.2986
-Epoch [620/2000], MSE: 7.0239
-Epoch [640/2000], MSE: 6.7425
-Epoch [660/2000], MSE: 6.8450
-Epoch [680/2000], MSE: 7.0404
-Epoch [700/2000], MSE: 6.8045
-Epoch [720/2000], MSE: 7.0751
-Epoch [740/2000], MSE: 6.8633
-Epoch [760/2000], MSE: 6.8883
-Epoch [780/2000], MSE: 7.0123
-Epoch [800/2000], MSE: 7.0087
-Epoch [820/2000], MSE: 6.7476
-Epoch [840/2000], MSE: 7.0437
-Epoch [860/2000], MSE: 6.5762
-Epoch [880/2000], MSE: 6.6052
-Epoch [900/2000], MSE: 6.6071
-Epoch [920/2000], MSE: 6.5904
-Epoch [940/2000], MSE: 6.7036
-Epoch [960/2000], MSE: 6.8419
-Epoch [980/2000], MSE: 6.8250
-Epoch [1000/2000], MSE: 6.6968
-Epoch [1020/2000], MSE: 6.4933
-Epoch [1040/2000], MSE: 6.5892
-Epoch [1060/2000], MSE: 6.8349
-Epoch [1080/2000], MSE: 6.5203
-Epoch [1100/2000], MSE: 6.5392
-Epoch [1120/2000], MSE: 6.6257
-Epoch [1140/2000], MSE: 7.7885
-Epoch [1160/2000], MSE: 6.6420
-Epoch [1180/2000], MSE: 7.6714
-Epoch [1200/2000], MSE: 6.7933
-Epoch [1220/2000], MSE: 6.4313
-Epoch [1240/2000], MSE: 6.5556
-Epoch [1260/2000], MSE: 6.2953
-Epoch [1280/2000], MSE: 6.4212
-Epoch [1300/2000], MSE: 6.5820
-Epoch [1320/2000], MSE: 6.2777
-Epoch [1340/2000], MSE: 6.6259
-Epoch [1360/2000], MSE: 6.2902
-Epoch [1380/2000], MSE: 6.2867
-Epoch [1400/2000], MSE: 6.3099
-Epoch [1420/2000], MSE: 6.2715
-Epoch [1440/2000], MSE: 6.6499
-Epoch [1460/2000], MSE: 6.1629
-Epoch [1480/2000], MSE: 6.3660
-Epoch [1500/2000], MSE: 6.0507
-Epoch [1520/2000], MSE: 6.4245
-Epoch [1540/2000], MSE: 6.1184
-Epoch [1560/2000], MSE: 6.0322
-Epoch [1580/2000], MSE: 6.4354
-Epoch [1600/2000], MSE: 7.3367
-Epoch [1620/2000], MSE: 7.3343
-Epoch [1640/2000], MSE: 6.1270
-Epoch [1660/2000], MSE: 6.1344
-Epoch [1680/2000], MSE: 6.0197
-Epoch [1700/2000], MSE: 6.0213
-Epoch [1720/2000], MSE: 8.5848
-Epoch [1740/2000], MSE: 5.8924
-Epoch [1760/2000], MSE: 6.2286
-Epoch [1780/2000], MSE: 5.7717
-Epoch [1800/2000], MSE: 5.8172
-Epoch [1820/2000], MSE: 5.9911
-Epoch [1840/2000], MSE: 6.2942
-Epoch [1860/2000], MSE: 5.6975
-Epoch [1880/2000], MSE: 6.1747
-Epoch [1900/2000], MSE: 5.5439
-Epoch [1920/2000], MSE: 6.0381
-Epoch [1940/2000], MSE: 5.8787
-Epoch [1960/2000], MSE: 5.7985
-Epoch [1980/2000], MSE: 6.2552
-Epoch [2000/2000], MSE: 5.5973
-DEBUG: 岡本和の成績ベクトル -> [0.24426406173955365, 0.30455878855149443, 0.35079607870402557, 0.10653201696447193]
-
---- 打順評価結果 (2025実績反映版) ---
-実際の打順予測得点: 4.01
-出塁率降順予測得点: 1.63
-期待上昇スコア: -2.38
+#### 2026年度打撃履歴
+```txt
+https://baseball.yahoo.co.jp/npb/game/2021038622/text
 ```
+**スポナビを利用しているが,日刊速報に変更の予定↓**
 
-## ファイル概要
-### python
-|ファイル名|概要|
+```txt
+https://www.nikkansports.com/baseball/professional/score/2026/pf-score-20260327.html
+```
+### データ形式
+- CSV：個人打撃成績(1ファイル=1年間分)
+- JSON：打撃履歴(1ファイル＝1試合分)
+
+### 主な項目
+#### game_data_2025/
+|データ項目|用語|
 |---|---|
-|2025_initial_stats_scraper.py|NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
-|at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
-|data_explorer.py|学習データの品質を診断する分析スクリプトで、得点分布・選手データのカバー率・特徴ベクトルのレンジを出力|
-|fature_engineering.py|試合JSONから打席結果を累積しながら、スタメン打順の成績ベクトルと得点をセットにした学習データを構築するスクリプト|
-|model_arch.py|スタメン打順の成績ベクトルを入力にLSTMで得点を予測する回帰モデルを定義・学習するコード|
-|npb_bulk_scraper.py|Yahoo!野球のNPB試合テキスト中継ページをスクレイピングし、スコアボードと打席情報をJSON形式で保存するスクリプト(公式戦)|
-|op_npb_bulk_scraper.py|Yahoo!野球のNPB試合テキスト中継ページをスクレイピングし、スコアボードと打席情報をJSON形式で保存するスクリプト(OP戦)|
-|order_simulator.py|試合JSONからデータ構築・LSTM学習・打順最適化シミュレーションまでを一括実行する統合スクリプト|
-|parser_utils.py|特定の1試合のYahoo!野球テキスト中継をスクレイピングしてJSONに保存する動作確認用スクリプト|
-|scraper_sample.py|試合前情報のパース処理を省いた、スコアボードと打席テキストのみを取得する簡略版スクレイパー|
-|stats_2025_train_model.py|2025年の実績CSVを初期値として球団別に選手を管理し、2026年試合データで累積更新しながらLSTMで打順の得点を予測・比較するシステム|
-|stats_2025_train_model_attention.py|LSTMにAttention機構を追加し、打順ごとの重要度を可視化できるように拡張したモデル|
-|text_pattern_analyzer.py|試合JSONから打席結果テキストを収集し、頻出表現をランキング表示する分析スクリプト|
-|train_model.py|累積成績から打順ベクトルを生成してLSTMで得点を予測する、データ構築から学習までの一連のパイプライン|
-|visualize_average_contribution.py|1試合あたりの平均的な貢献度を可視化|
-|visualize_specific_game.py|特定の1試合の詳細な貢献度を可視化|
-|visualize_total_contribution.py|全試合の合計得点貢献を可視化|
+|url|試合詳細ページのURL|
+|scoreboard.team|チーム名|
+|scoreboard.R|得点|
+|text_live.inning|イニング（例：1回表、5回裏、試合前）|
+|pregame.lineups.team|チーム名（スタメン情報）|
+|pregame.lineups.players|スタメン選手名（打順順）|
+|plays.lines[0]|打順＋選手名（例：1番 西川）|
+|plays.lines[1]|打席結果（例：右安、三振、四球など）|
 
+> ※ linesは文字列のため、打順・選手名・結果はパース処理が必要
 
-
-[コード詳細](https://hackmd.io/@Q6DZToC7RdeE3EFOW2XCAg/SkzxHR7hWe/edit)
-
-### データ
-|ファイル名|概要|
+#### initial_stats_2024.csv/initial_stats_2025.csv
+|データ項目|用語|
 |---|---|
-|initial_stats_2025.csv|2025年度個人打撃成績|
-|game_2021038670_text.json|4/5読売ジャイアンツvs.横浜DeNAベイスターズ試合テキスト速報|
-|game_data📁|2026年度OP戦/シーズン戦データ|
-|graph_data📁|グラフ保存用フォルダー|
+|team|チーム名(12球団)|
+|name|選手名()|
+|AB|打数|
+|H|安打|
+|2B|2塁打|
+|3B|3塁打|
+|HR|本塁打|
+|TB|塁打|
+|BB|四球|
+|HBP|死球|
+|SF|犠飛|
+
+
+## その他・あれこれ
+
+### [研究ノート](https://hackmd.io/21dSIeucTJWG9MuyuxF3Eg)
+### [コード詳細](https://hackmd.io/@Q6DZToC7RdeE3EFOW2XCAg/SkzxHR7hWe/edit)
+### 
 
 
 
-## 後で消す
-
-
-### 画像
-<img width="488" height="595" alt="image" src="https://github.com/user-attachments/assets/165781cf-89bf-4f5e-b4f2-b881c64ca558" />
-
-
-### データのあれこれ
-test2.pyでスクレイピングしたデータから累積データを取得.算出するデータは以下の通り.
-- HR(本塁打数)
-- R(得点)
-- RBI(打点)
-- SB(盗塁)
-- H(安打)
-- BB/HBP(四死球)
-- SO(三振)
-- PA/AB(打席/段数)
-- AVG(打率)
-- OBP(出塁率)
-- SLG(長打率) 
-- ISO(長打力)
-- BABIP(インプレー打球の安打率)
 
 
 
-### test.py
-- 4/5試合の巨人横浜戦をスクレイピングするコード
-### test1.py
-- 正規表現で、選手名を抜き出す処理を追加したコード
-### test2.py
-- test1.pyを改良し、NPB(2026/3/27~2026/4/05)全試合をgame_dataフォルダーに保存・スクレイピングするコード
 
-### hoge.py
-- test2.pyで得た対象データから、打席結果の表現をリストアップするコード
 
-### hoge1.py
-- 全試合累積成績処理スクリプトするコード
-### hoge2.py
-- PyTorchによる実装コード 
-### hoge3.py
-- 打順最適化 RNN（LSTM）学習スクリプト
-### hoge3.1.py
-- hoge3.pyを追加実装。特定のチームの打順を評価する関数を作成する
 
-### game_2021038670_text.json
-- test.pyを実行した際に、タイトル・更新時刻・スコア・各打席テキストで入ったJSONを出力できることを確認済み
 
-### 今後の検討
-#### その1
-MSE数値が7.36について:
-> オープン戦特有のノイズがあるのでは?問題
 
-若手を試す,主力の調整が目的のため、シーズ中ほど勝ちに徹した打順が組まれない.そのため,このくらいの得点になるはずという法則性を見つけるのが難しい.
->> なら昨年シーズンの成績を初期値として読み込む処理を入れる?!
 
-昨年シーズンの成績がない場合,リーグ平均値を付与
-#### その2
-扱うデータについて:2024-2025年度公式戦のデータを使う.スポナビでは入手困難のため,日韓スポーツの[スコア詳細](https://www.nikkansports.com/baseball/professional/score/2024/cl2024032901.html)を使うことを検討
 
