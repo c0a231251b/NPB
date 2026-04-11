@@ -17,6 +17,7 @@
 |ファイル名|概要|
 |---|---|
 |2024_initial_stats_scraper.py|2024年NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
+|2024_pitcher_stats_scraper.py|2024年NPBの公式サイトから12球団の選手投手成績をスクレイピングしてCSVに保存するスクリプト
 |2025_initial_stats_scraper.py|2025年NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
 |at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
 |data_explorer.py|学習データの品質を診断する分析スクリプトで、得点分布・選手データのカバー率・特徴ベクトルのレンジを出力|
@@ -48,6 +49,7 @@
 |game_2021038670_text.json|4/5読売ジャイアンツvs.横浜DeNAベイスターズ試合テキスト速報|
 |initial_stats_2024.csv|2024年度個人打撃成績|
 |initial_stats_2025.csv|2025年度個人打撃成績|
+|pitcher_stats_2024.csv|2024年度個人投手成績|
 
 ## 野球用語
 ### 使用する用語一覧
@@ -56,7 +58,7 @@
 |AVG|打率|
 |OBP|出塁率|
 |SLG|長打率|
-|OPS|打撃指標数|
+|OPS|打撃の総合評価指標|
 
 ### 詳細
 #### AVG
@@ -88,15 +90,30 @@ $$
 
 ##### OPS
 $$
-OSP = \frac{OBP}{SLG}
+OPS = \frac{OBP}{SLG}
 $$
 
 $$
-OSP = \frac{出塁率}{長打率}
+打撃の総合評価指標 = \frac{出塁率}{長打率}
 $$ 
 
 ## 対象データ
 ### ソース元
+#### 2024年度個人投手成績
+```txt=
+https://npb.jp/bis/2024/stats/idp1_g.html
+https://npb.jp/bis/2024/stats/idp1_t.html
+https://npb.jp/bis/2024/stats/idp1_db.html
+https://npb.jp/bis/2024/stats/idp1_c.html
+https://npb.jp/bis/2024/stats/idp1_s.html
+https://npb.jp/bis/2024/stats/idp1_d.html
+https://npb.jp/bis/2024/stats/idp1_h.html
+https://npb.jp/bis/2024/stats/idp1_f.html
+https://npb.jp/bis/2024/stats/idp1_m.html
+https://npb.jp/bis/2024/stats/idp1_e.html
+https://npb.jp/bis/2024/stats/idp1_b.html
+https://npb.jp/bis/2024/stats/idp1_l.html
+```
 #### 2024年度個人打撃成績
 ```txt=
 https://npb.jp/bis/2024/stats/idb1_g.html
@@ -179,8 +196,8 @@ https://www.nikkansports.com/baseball/professional/score/2026/pf-score-20260327.
 #### initial_stats_2024.csv/initial_stats_2025.csv
 |データ項目|用語|
 |---|---|
-|team|チーム名(12球団)|
-|name|選手名()|
+|team|チーム名|
+|name|選手名|
 |AB|打数|
 |H|安打|
 |2B|2塁打|
@@ -190,6 +207,19 @@ https://www.nikkansports.com/baseball/professional/score/2026/pf-score-20260327.
 |BB|四球|
 |HBP|死球|
 |SF|犠飛|
+
+#### pitcher_stats_2024.csv
+|データ項目|用語|
+|---|---|
+|team|チーム名|
+|name|選手名|
+|G|登板数|
+|IP|投球回|
+|H|被安打|
+|HR|被本塁打|
+|SO|奪三振|
+|ERA|防御率|
+
 
 
 ## その他・あれこれ
