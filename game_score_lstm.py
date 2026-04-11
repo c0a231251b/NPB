@@ -14,7 +14,7 @@ from datetime import datetime
 # -----------------------------------------------
 PARAMS = {
     "model_type": "Standard LSTM (Dynamic Stats)",
-    "input_size": 3,      # [打率, 本塁打, OPS]
+    "input_size": 4,      # [打率, 本塁打, 長打率, OPS]に変更
     "hidden_size": 64,
     "num_epochs": 100,
     "learning_rate": 0.001,
@@ -40,7 +40,8 @@ class DynamicStatsTracker:
         avg = s['H'] / ab
         obp = (s['H'] + s['BB'] + s['HBP']) / max((s['AB'] + s['BB'] + s['HBP'] + s['SF']), 1)
         slg = s['TB'] / ab
-        return [avg, s['HR'], obp + slg]
+        # [打率, 本塁打, 長打率, OPS] の4要素を返す
+        return [avg, s['HR'], slg,obp + slg]
 
     def update(self, team, name, result_text):
         key = (team, name)
@@ -115,6 +116,7 @@ def main():
     results_log.append("========== 学習設定 (Parameters) ==========")
     for k, v in PARAMS.items():
         results_log.append(f"{k}: {v}")
+    results_log.append(f"Features: [AVG, HR, SLG, OPS]") # ログを更新
     results_log.append(f"Sample Count: {len(X_train)}")
     results_log.append("==========================================\n")
 
