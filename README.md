@@ -22,33 +22,21 @@
 |at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
 |calc_score_stats.py|game_data_2025 フォルダ内のJSONを用いて、2025年度NPBの全試合得点の標準偏差を求めるスクリプト|
 |compare_models.py|打順の特徴量を平坦化し、重回帰とランダムフォレストでLSTMと得点予測精度を比較するベースライン評価スクリプト|
-|data_explorer.py|学習データの品質を診断する分析スクリプトで、得点分布・選手データのカバー率・特徴ベクトルのレンジを出力|
-|fature_engineering.py|試合JSONから打席結果を累積しながら、スタメン打順の成績ベクトルと得点をセットにした学習データを構築するスクリプト|
 |game_score_lstm.py|打率・本塁打・長打率・OPSの4指標を動的に更新しながら標準LSTMで得点を予測し、結果をタイムスタンプ付きファイルに保存するスクリプト|
-|model_arch.py|スタメン打順の成績ベクトルを入力にLSTMで得点を予測する回帰モデルを定義・学習するコード|
-|order_simulator.py|試合JSONからデータ構築・LSTM学習・打順最適化シミュレーションまでを一括実行する統合スクリプト|
-|parser_utils.py|特定の1試合のYahoo!野球テキスト中継をスクレイピングしてJSONに保存する動作確認用スクリプト|
-|scraper_sample.py|試合前情報のパース処理を省いた、スコアボードと打席テキストのみを取得する簡略版スクレイパー|
-|stats_2024_train_model_attention.py|スタメン9人未満のデータを除外するバリデーションを追加した、LSTM+Attention打順予測モデルの改良版|
-|stats_2024_train_model_attention_final.py|双方向LSTM＋Attentionモデル|
-|stats_2025_train_model.py|2025年の実績CSVを初期値として球団別に選手を管理し、2026年試合データで累積更新しながらLSTMで打順の得点を予測・比較するシステム|
-|stats_2025_train_model_attention.py|LSTMにAttention機構を追加し、打順ごとの重要度を可視化できるように拡張したモデル|
-|text_pattern_analyzer.py|試合JSONから打席結果テキストを収集し、頻出表現をランキング表示する分析スクリプト|
-|train_model.py|累積成績から打順ベクトルを生成してLSTMで得点を予測する、データ構築から学習までの一連のパイプライン|
-|visualize_average_contribution.py|1試合あたりの平均的な貢献度を可視化|
-|visualize_specific_game.py|特定の1試合の詳細な貢献度を可視化|
-|visualize_total_contribution.py|全試合の合計得点貢献を可視化|
+|scrape_nikkan_2025_all.py|日刊スコア速報から2025年度NPB公式戦全858試合（約6.4万打席）の打席履歴をスクレイピングしてCSVに保存するスクリプト|
+
 
 ### data
-|ファイル名|概要|
+|ファイル/フィルダー名|概要|
 |---|---|
 |game_data_2025|2025年度打席履歴|
-|graph_data|グラフ保存用フォルダー|
 |url_list|日程ナビURLリストの保存先|
-|game_2021038670_text.json|4/5読売ジャイアンツvs横浜DeNAベイスターズ試合テキスト速報|
 |initial_stats_2024.csv|2024年度個人打撃成績|
 |initial_stats_2025.csv|2025年度個人打撃成績|
 |pitcher_stats_2024.csv|2024年度個人投手成績|
+|result.txt|at_bats.pyの実行結果の保存先|
+
+
 
 ## 野球用語
 ### 使用する用語一覧
@@ -164,15 +152,6 @@ https://www.nikkansports.com/baseball/professional/schedule/pl09.html
 https://www.nikkansports.com/baseball/professional/schedule/pl10.html
 ```
 
-#### 2026年度打撃履歴
-```txt
-https://baseball.yahoo.co.jp/npb/game/2021038622/text
-```
-**スポナビを利用しているが,日刊速報に変更の予定↓**
-
-```txt
-https://www.nikkansports.com/baseball/professional/score/2026/pf-score-20260327.html
-```
 ### データ形式
 - CSV：個人打撃成績(1ファイル=1年間分)
 - JSON：打撃履歴(1ファイル＝1試合分)
