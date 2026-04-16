@@ -200,13 +200,6 @@ https://www.nikkansports.com/baseball/professional/schedule/pl10.html
 
 
 
-## その他・あれこれ
-
-### [研究ノート](https://hackmd.io/21dSIeucTJWG9MuyuxF3Eg)
-### [コード詳細](https://hackmd.io/@Q6DZToC7RdeE3EFOW2XCAg/SkzxHR7hWe/edit)
-
-
-
 
 
 
