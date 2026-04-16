@@ -16,10 +16,11 @@
 ### python
 |ファイル名|概要|
 |---|---|
-|2024_initial_stats_scraper.py|2024年NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
+|2024_initial_stats_scraper.py|2024年NPBの公式サイトから12球団の選手打撃成績をスクレイピング　してCSVに保存するスクリプト|
 |2024_pitcher_stats_scraper.py|2024年NPBの公式サイトから12球団の選手投手成績をスクレイピングしてCSVに保存するスクリプト
 |2025_initial_stats_scraper.py|2025年NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
 |at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
+|calc_score_stats.py|game_data_2025 フォルダ内のJSONを用いて、2025年度NPBの全試合得点の標準偏差を求めるスクリプト|
 |data_explorer.py|学習データの品質を診断する分析スクリプトで、得点分布・選手データのカバー率・特徴ベクトルのレンジを出力|
 |fature_engineering.py|試合JSONから打席結果を累積しながら、スタメン打順の成績ベクトルと得点をセットにした学習データを構築するスクリプト|
 |game_score_lstm.py|打率・本塁打・長打率・OPSの4指標を動的に更新しながら標準LSTMで得点を予測し、結果をタイムスタンプ付きファイルに保存するスクリプト|
@@ -46,7 +47,7 @@
 |game_data_2025|2025年度打席履歴|
 |graph_data|グラフ保存用フォルダー|
 |url_list|日程ナビURLリストの保存先|
-|game_2021038670_text.json|4/5読売ジャイアンツvs.横浜DeNAベイスターズ試合テキスト速報|
+|game_2021038670_text.json|4/5読売ジャイアンツvs横浜DeNAベイスターズ試合テキスト速報|
 |initial_stats_2024.csv|2024年度個人打撃成績|
 |initial_stats_2025.csv|2025年度個人打撃成績|
 |pitcher_stats_2024.csv|2024年度個人投手成績|
@@ -226,7 +227,7 @@ https://www.nikkansports.com/baseball/professional/score/2026/pf-score-20260327.
 
 ### [研究ノート](https://hackmd.io/21dSIeucTJWG9MuyuxF3Eg)
 ### [コード詳細](https://hackmd.io/@Q6DZToC7RdeE3EFOW2XCAg/SkzxHR7hWe/edit)
-### 
+
 
 
 
