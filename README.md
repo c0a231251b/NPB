@@ -17,7 +17,8 @@
 |ファイル名|概要|
 |---|---|
 |2024_initial_stats_scraper.py|2024年NPBの公式サイトから12球団の選手打撃成績をスクレイピング　してCSVに保存するスクリプト|
-|2024_pitcher_stats_scraper.py|2024年NPBの公式サイトから12球団の選手投手成績をスクレイピングしてCSVに保存するスクリプト
+|2024_pitcher_stats_scraper.py|2024年NPBの公式サイトから12球団の選手投手成績をスクレイピングしてCSVに保存するスクリプト|
+|2024_pitcher_stats_scraper_all.py|2024年NPB全12球団の投手成績（ERA・K/9・HR/9・球種割合）をスクレイピングしてCSVに保存するスクリプト|
 |2025_initial_stats_scraper.py|2025年NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
 |at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
 |calc_score_stats.py|game_data_2025 フォルダ内のJSONを用いて、2025年度NPBの全試合得点の標準偏差を求めるスクリプト|
@@ -34,6 +35,7 @@
 |initial_stats_2024.csv|2024年度個人打撃成績|
 |initial_stats_2025.csv|2025年度個人打撃成績|
 |pitcher_stats_2024.csv|2024年度個人投手成績|
+|pitcher_stats_2024_all.csv|2024年度個人投手成績(球種割合含む)|
 |result.txt|at_bats.pyの実行結果の保存先|
 
 
@@ -100,6 +102,21 @@ https://npb.jp/bis/2024/stats/idp1_m.html
 https://npb.jp/bis/2024/stats/idp1_e.html
 https://npb.jp/bis/2024/stats/idp1_b.html
 https://npb.jp/bis/2024/stats/idp1_l.html
+```
+```txt=
+https://nf3.sakura.ne.jp/2024/Central/G/p/18_stat.htm
+https://nf3.sakura.ne.jp/2024/Central/T/p/17_stat.htm
+https://nf3.sakura.ne.jp/2024/Central/DB/p/17_stat.htm
+https://nf3.sakura.ne.jp/2024/Central/C/p/17_stat.htm
+https://nf3.sakura.ne.jp/2024/Central/S/p/17_stat.htm
+https://nf3.sakura.ne.jp/2024/Central/D/p/17_stat.htm
+https://nf3.sakura.ne.jp/2024/Pacific/B/p/13_stat.htm
+https://nf3.sakura.ne.jp/2024/Pacific/M/p/14_stat.htm
+https://nf3.sakura.ne.jp/2024/Pacific/H/p/14_stat.htm
+https://nf3.sakura.ne.jp/2024/Pacific/E/p/14_stat.htm
+https://nf3.sakura.ne.jp/2024/Pacific/L/p/14_stat.htm
+https://nf3.sakura.ne.jp/2024/Pacific/F/p/14_stat.htm
+
 ```
 #### 2024年度個人打撃成績
 ```txt=
@@ -198,8 +215,17 @@ https://www.nikkansports.com/baseball/professional/schedule/pl10.html
 |SO|奪三振|
 |ERA|防御率|
 
+### pitcher_stats_2024_all.csv
 
 
+|データ項目|用語|
+|---|---|
+|team|チーム名|
+|name|選手名|
+|hand|聞き手|
+|K/9|奪三振率|
+|HR/9|被本塁打率|
+|pitch_〇〇_share|各球種割合(20種類)|
 
 
 
