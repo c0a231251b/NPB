@@ -2,11 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
-import re
+import numpy as np
 
 def scrape_2024_stats():
     # 2024年度のチーム別個人打撃成績URL
-    # ソースコードに基づき、正しいURLとチーム名を設定
     team_urls = {
         "巨人": "https://npb.jp/bis/2024/stats/idb1_g.html",
         "阪神": "https://npb.jp/bis/2024/stats/idb1_t.html",
@@ -25,7 +24,6 @@ def scrape_2024_stats():
     all_players = []
 
     def to_int(element):
-        """テキストを数値に変換。空文字やハイフンは0にする"""
         val = element.get_text(strip=True).replace(',', '')
         if not val or val == '-':
             return 0
@@ -35,37 +33,35 @@ def scrape_2024_stats():
         print(f"Scraping {team_name}: {url}")
         try:
             res = requests.get(url)
-            # ソースコードの meta charset="utf-8" に合わせつつ、自動判定も行う
             res.encoding = res.apparent_encoding 
-            
             soup = BeautifulSoup(res.text, "html.parser")
             
-            # ソースコードにある tr class="ststats" を抽出
             rows = soup.find_all("tr", class_="ststats")
             
-            if not rows:
-                print(f"  Warning: No data rows found for {team_name}")
-                continue
-
             for row in rows:
                 cols = row.find_all("td")
-                # 選手データ行は td が20列以上ある
                 if len(cols) < 20:
                     continue
                 
-                # 名前 (index 1) のクレンジング
+                # --- 打ち方(Hand)の判定を文字列に変更 ---
+                hand_mark = cols[0].get_text(strip=True)
+                if "*" in hand_mark:
+                    hand = "左打"
+                elif "+" in hand_mark:
+                    hand = "両打"
+                else:
+                    hand = "右打"
+                
                 raw_name = cols[1].get_text(strip=True)
                 name = raw_name.replace("\u3000", "").replace(" ", "").replace("*", "").replace("+", "")
                 
-                # 投手などで打撃成績が「計」となっている行は除外
                 if name == "計":
                     continue
 
-                # 各指標の抽出 (ソースコードの列順に基づく)
-                # index 4:打数, 6:安打, 7:二塁打, 8:三塁打, 9:本塁打, 10:塁打, 15:犠飛, 16:四球, 18:死球
                 player_data = {
                     "team": team_name,
                     "name": name,
+                    "Hand": hand,
                     "AB": to_int(cols[4]),
                     "H": to_int(cols[6]),
                     "2B": to_int(cols[7]),
@@ -78,38 +74,30 @@ def scrape_2024_stats():
                 }
                 all_players.append(player_data)
             
-            time.sleep(0.5) # マナーとして待機
+            time.sleep(0.5)
         except Exception as e:
             print(f"  Error scraping {team_name}: {e}")
 
     if not all_players:
-        print("\nError: 選手データを取得できませんでした。構造を確認してください。")
+        print("\nError: 選手データを取得できませんでした。")
         return
 
     df = pd.DataFrame(all_players)
 
-    # リーグ平均の算出 (コールドスタート対策用)
-    summary = df.sum(numeric_only=True)
-    player_count = len(df)
-    
+    # リーグ平均の算出
+    # Handは文字列になったため、平均計算からは自動的に除外されます
+    summary = df.mean(numeric_only=True)
     avg_stats = {
         "team": "NPB",
         "name": "LEAGUE_AVERAGE",
-        "AB": summary["AB"] / player_count,
-        "H": summary["H"] / player_count,
-        "2B": summary["2B"] / player_count,
-        "3B": summary["3B"] / player_count,
-        "HR": summary["HR"] / player_count,
-        "TB": summary["TB"] / player_count,
-        "BB": summary["BB"] / player_count,
-        "HBP": summary["HBP"] / player_count,
-        "SF": summary["SF"] / player_count,
+        "Hand": "右打", # 平均行は便宜上「右打」固定、または「-」とする
+        "AB": summary["AB"], "H": summary["H"], "2B": summary["2B"],
+        "3B": summary["3B"], "HR": summary["HR"], "TB": summary["TB"],
+        "BB": summary["BB"], "HBP": summary["HBP"], "SF": summary["SF"]
     }
     
-    # 平均行を末尾に追加
     df = pd.concat([df, pd.DataFrame([avg_stats])], ignore_index=True)
 
-    # CSVとして保存
     output_file = "initial_stats_2024.csv"
     df.to_csv(output_file, index=False, encoding="utf-8-sig")
     print(f"\n完了！ {len(df)-1} 名の選手データを '{output_file}' に保存しました。")
