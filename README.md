@@ -193,6 +193,7 @@ https://www.nikkansports.com/baseball/professional/schedule/pl10.html
 |---|---|
 |team|チーム名|
 |name|選手名|
+|hand|聞き手|
 |AB|打数|
 |H|安打|
 |2B|2塁打|
