@@ -23,6 +23,7 @@
 |at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
 |calc_score_stats.py|game_data_2025 フォルダ内のJSONを用いて、2025年度NPBの全試合得点の標準偏差を求めるスクリプト|
 |compare_models.py|打順の特徴量を平坦化し、重回帰とランダムフォレストでLSTMと得点予測精度を比較するベースライン評価スクリプト|
+|compare_models_v2.py|投手データと打者データを統合した合計69次元のデータセットを用いて、重回帰分析（Linear Regression）とランダムフォレスト（Random Forest）の精度を比較するスクリプト|
 |game_score_lstm.py|打率・本塁打・長打率・OPSの4指標を動的に更新しながら標準LSTMで得点を予測し、結果をタイムスタンプ付きファイルに保存するスクリプト|
 |game_score_lstm_v2.py|打者の成績に加えて相手先発投手のデータ（ERA・球種割合等）を結合した29次元特徴量でLSTM得点予測を行うスクリプト|
 |game_score_lstm_v2_with_plot.py|投手考慮版LSTMにバッチ学習・訓練検証分割・学習曲線の可視化を追加した、モデル評価機能強化版スクリプト|
@@ -39,6 +40,7 @@
 |pitcher_stats_2024.csv|2024年度個人投手成績|
 |pitcher_stats_2024_all.csv|2024年度個人投手成績(球種割合含む)|
 |result.txt|at_bats.pyの実行結果の保存先|
+|learning_curve_20260417_220804.png|game_score_lstm_v2_with_plot.pyの実行結果|
 
 
 
@@ -80,13 +82,15 @@ SLG = \frac{塁打}{打数}
 $$
 
 ##### OPS
-$$
-OPS = \frac{OBP}{SLG}
+
+$$ 
+OPS = OBP+SLG
 $$
 
 $$
-打撃の総合評価指標 = \frac{出塁率}{長打率}
+打撃の総合評価指標 = 出塁率+長打率
 $$ 
+
 
 ## 対象データ
 ### ソース元
