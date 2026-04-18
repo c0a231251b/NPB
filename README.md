@@ -208,6 +208,7 @@ https://www.nikkansports.com/baseball/professional/schedule/pl10.html
 |3B|3塁打|
 |HR|本塁打|
 |TB|塁打|
+|SB|盗塁|
 |BB|四球|
 |HBP|死球|
 |SF|犠飛|
