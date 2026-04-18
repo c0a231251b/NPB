@@ -68,6 +68,7 @@ def scrape_2024_stats():
                     "3B": to_int(cols[8]),
                     "HR": to_int(cols[9]),
                     "TB": to_int(cols[10]),
+                    "SB": to_int(cols[12]),
                     "BB": to_int(cols[16]),
                     "HBP": to_int(cols[18]),
                     "SF": to_int(cols[15])
@@ -93,6 +94,7 @@ def scrape_2024_stats():
         "Hand": "右打", # 平均行は便宜上「右打」固定、または「-」とする
         "AB": summary["AB"], "H": summary["H"], "2B": summary["2B"],
         "3B": summary["3B"], "HR": summary["HR"], "TB": summary["TB"],
+        "SB": summary["SB"],
         "BB": summary["BB"], "HBP": summary["HBP"], "SF": summary["SF"]
     }
     
