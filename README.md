@@ -20,6 +20,7 @@
 |2024_pitcher_stats_scraper.py|2024年NPBの公式サイトから12球団の選手投手成績をスクレイピングしてCSVに保存するスクリプト|
 |2024_pitcher_stats_scraper_all.py|2024年NPB全12球団の投手成績（ERA・K/9・HR/9・球種割合）をスクレイピングしてCSVに保存するスクリプト|
 |2025_initial_stats_scraper.py|2025年NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
+|apply_batter_types.py|打者をパワー・アベレージ・俊足・選球眼・オールラウンダーの5タイプに分類してCSVに保存するスクリプト|
 |at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
 |calc_score_stats.py|game_data_2025 フォルダ内のJSONを用いて、2025年度NPBの全試合得点の標準偏差を求めるスクリプト|
 |compare_models.py|打順の特徴量を平坦化し、重回帰とランダムフォレストでLSTMと得点予測精度を比較するベースライン評価スクリプト|
@@ -37,6 +38,7 @@
 |---|---|
 |game_data_2025|2025年度打席履歴|
 |url_list|日程ナビURLリストの保存先|
+|classified_batter_stats.csv|打者のタイプを5つに分類し保存する|
 |initial_stats_2024.csv|2024年度個人打撃成績|
 |initial_stats_2025.csv|2025年度個人打撃成績|
 |pitcher_stats_2024.csv|2024年度個人投手成績|
