@@ -159,6 +159,9 @@ def main():
     plt.legend(); plt.grid(True)
     plt.savefig(f"learning_curve_type_lstm_{datetime.now().strftime('%H%M%S')}.png")
     print(f"\n最終検証MSE: {val_losses[-1]:.4f}")
+    torch.save(model.state_dict(), "best_type_lstm.pth")
+    import joblib
+    joblib.dump(scaler, "scaler.gz")
 
 if __name__ == "__main__":
     main()
