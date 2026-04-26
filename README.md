@@ -20,6 +20,7 @@
 |2024_pitcher_stats_scraper.py|2024年NPBの公式サイトから12球団の選手投手成績をスクレイピングしてCSVに保存するスクリプト|
 |2024_pitcher_stats_scraper_all.py|2024年NPB全12球団の投手成績（ERA・K/9・HR/9・球種割合）をスクレイピングしてCSVに保存するスクリプト|
 |2025_initial_stats_scraper.py|2025年NPBの公式サイトから12球団の選手打撃成績をスクレイピングしてCSVに保存するスクリプト|
+|analyze_all_affinities.py|FMモデルの埋め込みベクトルの内積を用いて全打者×全投手の相性スコアを計算しテキストファイルに出力するスクリプト|
 |analyze_lasso_weights.py|タイプ分類特徴量を用いたLasso回帰の係数を分析し、得点予測に貢献する打順・打者タイプ・投手特徴量の重要度をランキング表示するスクリプト|
 |apply_batter_types.py|打者をパワー・アベレージ・俊足・選球眼・オールラウンダーの5タイプに分類してCSVに保存するスクリプト|
 |at_bats.py|複数の試合JSONファイルから総打席数を集計して表示するスクリプト|
@@ -29,16 +30,18 @@
 |compare_models_v2.py|投手データと打者データを統合した合計69次元のデータセットを用いて、重回帰分析（Linear Regression）とランダムフォレスト（Random Forest）の精度を比較するスクリプト|
 |compare_models_v3.py|投手データと打者データを結合した合計43次元にスリム化し、重回帰分析とランダムフォレストの精度を比較するスクリプト|
 |compare_patterns_v4.py|打者の生成績特徴量とタイプ分類特徴量の2パターンをLasso回帰で比較し、どちらの表現が得点予測に有効かを検証するスクリプト|
+|create_player_ids.py|CSVと試合JSONから全選手名を収集し、名前とIDの対応マスターをJSONとして保存するスクリプト|
 |game_score_lstm.py|打率・本塁打・長打率・OPSの4指標を動的に更新しながら標準LSTMで得点を予測し、結果をタイムスタンプ付きファイルに保存するスクリプト|
 |game_score_lstm_v2.py|打者の成績に加えて相手先発投手のデータ（ERA・球種割合等）を結合した29次元特徴量でLSTM得点予測を行うスクリプト|
 |game_score_lstm_v2_with_plot.py|投手考慮版LSTMにバッチ学習・訓練検証分割・学習曲線の可視化を追加した、モデル評価機能強化版スクリプト|
 |lasso_valid_features.py|Lasso回帰を使用して、特徴量の重要性を評価するスクリプト|
 |scrape_nikkan_2025_all.py|日刊スコア速報から2025年度NPB公式戦全858試合（約6.4万打席）の打席履歴をスクレイピングしてCSVに保存するスクリプト|
-
+|train_fm_model.py|選手IDの埋め込みと数値特徴量を組み合わせた因数分解機械(FM)で得点を予測するモデルの学習スクリプト|
 
 ### data
 |ファイル/フィルダー名|概要|
 |---|---|
+|all_player_affinities_standardized.txt|全打者×全投手の相性スコア結果|
 |game_data_2025|2025年度打席履歴|
 |url_list|日程ナビURLリストの保存先|
 |classified_batter_stats.csv|打者のタイプを5つに分類し保存する|
@@ -46,6 +49,7 @@
 |initial_stats_2025.csv|2025年度個人打撃成績|
 |pitcher_stats_2024.csv|2024年度個人投手成績|
 |pitcher_stats_2024_all.csv|2024年度個人投手成績(球種割合含む)|
+|player_id_master.json|全選手名前とIDが対応マスター(FMを実装するために使用)|
 |result.txt|at_bats.pyの実行結果の保存先|
 |learning_curve_20260417_220804.png|game_score_lstm_v2_with_plot.pyの実行結果|
 
