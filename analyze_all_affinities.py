@@ -80,8 +80,8 @@ def analyze_all_to_txt():
                 if h_team == p_team or h_team == "??" or p_team == "??":
                     continue
                 
-                p_id = name_to_id[pitcher_id := pitcher_name] # ID取得
-                p_id = name_to_id[pitcher_name]
+                p_id = name_to_id.get(pitcher_name, 0)
+                if p_id == 0: continue # マスターにいない場合はスキップ
                 p_vec = v[p_id]
                 
                 score = np.dot(h_vec, p_vec)
