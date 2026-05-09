@@ -54,7 +54,7 @@ def visualize_tsne():
     plt.ylabel("次元 2")
     plt.grid(True, alpha=0.3)
     plt.savefig("player_tsne_clusters.png")
-    print("✅ 日本語対応版画像を保存しました。")
+    print("日本語対応版画像を保存しました。")
 
 if __name__ == "__main__":
     visualize_tsne()
