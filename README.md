@@ -38,6 +38,8 @@
 |scrape_nikkan_2025_all.py|日刊スコア速報から2025年度NPB公式戦全858試合（約6.4万打席）の打席履歴をスクレイピングしてCSVに保存するスクリプト|
 |t-SNE_Visualization.py|FMモデルの選手埋め込みベクトルをt-SNEで2次元圧縮し、注目選手にラベルを付けてクラスタリングを可視化するスクリプト|
 |train_fm_model.py|選手IDの埋め込みと数値特徴量を組み合わせた因数分解機械(FM)で得点を予測するモデルの学習スクリプト|
+|aggregate_real_batting_orders.py|あとでここ書く|
+|cluster_player_embeddings.py|クラスター数の検討＆クラスタリングをするスクリプト|
 
 ### data
 |ファイル/フィルダー名|概要|
