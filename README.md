@@ -38,8 +38,26 @@
 |scrape_nikkan_2025_all.py|日刊スコア速報から2025年度NPB公式戦全858試合（約6.4万打席）の打席履歴をスクレイピングしてCSVに保存するスクリプト|
 |t-SNE_Visualization.py|FMモデルの選手埋め込みベクトルをt-SNEで2次元圧縮し、注目選手にラベルを付けてクラスタリングを可視化するスクリプト|
 |train_fm_model.py|選手IDの埋め込みと数値特徴量を組み合わせた因数分解機械(FM)で得点を予測するモデルの学習スクリプト|
-|aggregate_real_batting_orders.py|K=4クラスタリングの打者潜在空間と2025年の実際のスタメン起用打順の相関をヒートマップで可視化するスクリプト|
+|aggregate_real_batting_orders.py|K=4クラスタリングの打者潜在空間と2025年の実際のスタメン起用打順の相関をヒートマップで可視化するスクリプト(最多起用打順)|
 |cluster_player_embeddings.py|クラスター数の検討＆クラスタリングをするスクリプト|
+|visualize_tsne_by_real_order_by_order_hoge.py|t-SNE散布図を打順別に3×3マルチパネルで表示し、各象限に戦術的解釈テキストを付加した拡張版可視化スクリプト|
+|visualize_tsne_by_real_order_by_order.py|実際のスタメン起用データと照合した最頻打順を色分けし、打順別に3×3のマトリクスでt-SNEを描画するスクリプト|
+|visualize_tsne_by_real_order.py|実打順データから各選手の最頻打順を集計し、t-SNE空間で打順別に色分けした1枚の散布図を生成するスクリプト|
+|visualize_tsne_filter.py|指定した球団（セ/パどちらか）のみに絞り込んで球団別カラーでt-SNEを描画するフィルタリング可視化スクリプト|
+|visualize_tsne_hand_no_pitchers.py|投手を除いた野手のみを対象に、投打の左右（右打・左打・両打）で色分けしてt-SNEを描画するスクリプト|
+|visualize_tsne_hand.py|投手・野手問わず全選手を対象に、投打の左右（右投・左投・右打・左打・両打）で色分けしてt-SNEを描画するスクリプト|
+|visualize_tsne_position_all.py|手作りのポジションマップを用いて全選手を投手・捕手・内野手・外野手に分類しt-SNEで可視化するスクリプト|
+|visualize_tsne_position_no_pitchers.py|投手を除いた野手のみをポジション別カラーで表示するt-SNE可視化スクリプト|
+|visualize_tsne_role_filtered.py|指定した特定選手のみをt-SNE空間上に抽出して位置を確認するためのスクリプト|
+|visualize_tsne_role_verify.py|全選手を投手と野手の2色で色分けし、注目選手（戸郷・岡本）にラベルを付けて投手/野手の分離を確認するスクリプト|
+|visualize_tsne_role.py|visualize_tsne_role_verify.pyとほぼ同一の内容で、実質的な差異のない別バージョン|
+|visualize_tsne_team_positions.py|指定チームの選手を対象に守備位置別カラーでt-SNEを描画し、球団内の役割分布を可視化するスクリプト|
+|visualize_tsne_team.py|全選手を球団別カラーで色分けしてt-SNEを描画し、球団ごとの潜在空間上の分布を確認するスクリプト|
+
+
+
+
+
 
 ### data
 |ファイル/フィルダー名|概要|
