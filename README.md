@@ -53,7 +53,10 @@
 |visualize_tsne_role.py|visualize_tsne_role_verify.pyとほぼ同一の内容で、実質的な差異のない別バージョン|
 |visualize_tsne_team_positions.py|指定チームの選手を対象に守備位置別カラーでt-SNEを描画し、球団内の役割分布を可視化するスクリプト|
 |visualize_tsne_team.py|全選手を球団別カラーで色分けしてt-SNEを描画し、球団ごとの潜在空間上の分布を確認するスクリプト|
-
+|prepare_fm_dataset.py|試合JSONから打者9人と相手投手のIDを名寄せロジックで解決し、FMモデル学習用データセットをpickle形式で保存するスクリプト|
+|prepare_fm_dataset_score_diff.py|前のデータセット作成スクリプトと同一ロジックで、目的変数を得点そのものから「自チーム得点マイナス相手得点」の得点差に変更したスクリプト|
+|train_fm_model_score_diff.py|得点差を目的変数としたFMモデルを学習し、専用のモデルファイルとスケーラーを保存するスクリプト|
+|visualize_tsne_score_diff.py|得点差ベースで学習したFMモデルの埋め込みベクトルをt-SNEで圧縮し、打順別に色分けした3×3マトリクス散布図を生成するスクリプト|
 
 
 
