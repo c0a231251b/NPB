@@ -58,6 +58,7 @@
 |train_fm_model_score_diff.py|得点差を目的変数としたFMモデルを学習し、専用のモデルファイルとスケーラーを保存するスクリプト|
 |visualize_tsne_score_diff.py|得点差ベースで学習したFMモデルの埋め込みベクトルをt-SNEで圧縮し、打順別に色分けした3×3マトリクス散布図を生成するスクリプト|
 |aggregate_game_counts_by_cluster.py|選手単位ではなくスタメン出場試合数ベースでクラスターと打順の相関を集計し、ヒートマップで可視化するスクリプト|
+|add_window_day_stats.py|継投順をBFから復元しながら打席ごとに打者・投手の直近30日成績を計算し、対比コントラスト特徴量としてJSONに書き込む精密版スクリプト|
 
 
 
@@ -68,6 +69,8 @@
 |---|---|
 |all_player_affinities_standardized.txt|全打者×全投手の相性スコア結果|
 |game_data_2025|2025年度打席履歴|
+|game_data_2025_match_results|上記2025年度打席履歴(欠損なし)|
+|game_data_2025_match_results_add_30day_stats|打者・投手の直近30日成績を計算した保存先|
 |url_list|日程ナビURLリストの保存先|
 |classified_batter_stats.csv|打者のタイプを5つに分類し保存する|
 |initial_stats_2024.csv|2024年度個人打撃成績|
@@ -274,8 +277,15 @@ https://www.nikkansports.com/baseball/professional/schedule/pl10.html
 |pitch_〇〇_share|各球種割合(20種類)|
 
 
+### window_day_stats.pyの実行方法
 
+```
+python window_day_stats.py game_data_2025_match_results --output_dir game_data_2025_match_results_add_30day_stats > dodo.txt
+```
 
+```
+python {実行ファイル名} {元のフォルダー名} --output_dir {出力フォルダー名} > dodo.txt
+```
 
 
 
