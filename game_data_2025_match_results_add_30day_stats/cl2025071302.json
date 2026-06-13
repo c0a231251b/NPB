@@ -1,0 +1,2305 @@
+{
+  "url": "https://www.nikkansports.com/baseball/professional/score/2025/cl2025071302.html",
+  "stadium": "バンテリンドーム",
+  "scoreboard": [
+    {
+      "team": "広島",
+      "R": "２",
+      "detail": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "team": "中日",
+      "R": "３",
+      "detail": [
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1X"
+      ]
+    }
+  ],
+  "text_live": [
+    {
+      "inning": "試合前",
+      "pregame": {
+        "lineups": [
+          {
+            "team": "広島",
+            "players": [
+              "中村奨",
+              "羽月",
+              "小園",
+              "ファビアン",
+              "末包",
+              "モンテロ",
+              "菊池",
+              "会沢",
+              "佐藤柳"
+            ]
+          },
+          {
+            "team": "中日",
+            "players": [
+              "岡林",
+              "田中",
+              "ブライト",
+              "細川",
+              "ボスラー",
+              "佐藤",
+              "山本",
+              "石伊",
+              "松葉"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "inning": "1回表",
+      "plays": [
+        {
+          "lines": [
+            "投手：松葉"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回表",
+      "plays": [
+        {
+          "lines": [
+            "1番 中村奨",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回表",
+      "plays": [
+        {
+          "lines": [
+            "2番 羽月",
+            "四球"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回表",
+      "plays": [
+        {
+          "lines": [
+            "3番 小園",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回表",
+      "plays": [
+        {
+          "lines": [
+            "4番 ファビアン",
+            "中飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回裏",
+      "plays": [
+        {
+          "lines": [
+            "投手：佐藤柳"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回裏",
+      "plays": [
+        {
+          "lines": [
+            "1番 岡林",
+            "二ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回裏",
+      "plays": [
+        {
+          "lines": [
+            "2番 田中",
+            "四球"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回裏",
+      "plays": [
+        {
+          "lines": [
+            "3番 ブライト",
+            "右２"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回裏",
+      "plays": [
+        {
+          "lines": [
+            "4番 細川",
+            "左２"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回裏",
+      "plays": [
+        {
+          "lines": [
+            "5番 ボスラー",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回裏",
+      "plays": [
+        {
+          "lines": [
+            "6番 佐藤",
+            "四球"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "1回裏",
+      "plays": [
+        {
+          "lines": [
+            "7番 山本",
+            "一邪"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "2回表",
+      "plays": [
+        {
+          "lines": [
+            "5番 末包",
+            "左安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "2回表",
+      "plays": [
+        {
+          "lines": [
+            "6番 モンテロ",
+            "右飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "2回表",
+      "plays": [
+        {
+          "lines": [
+            "7番 菊池",
+            "三併"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "2回裏",
+      "plays": [
+        {
+          "lines": [
+            "1番 岡林",
+            "右２"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "2回裏",
+      "plays": [
+        {
+          "lines": [
+            "2番 田中",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "2回裏",
+      "plays": [
+        {
+          "lines": [
+            "3番 ブライト",
+            "四球"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "2回裏",
+      "plays": [
+        {
+          "lines": [
+            "4番 細川",
+            "右飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "2回裏",
+      "plays": [
+        {
+          "lines": [
+            "8番 石伊",
+            "三直"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "2回裏",
+      "plays": [
+        {
+          "lines": [
+            "9番 松葉",
+            "四球"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "3回表",
+      "plays": [
+        {
+          "lines": [
+            "1番 中村奨",
+            "左安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "3回表",
+      "plays": [
+        {
+          "lines": [
+            "2番 羽月",
+            "中飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "3回表",
+      "plays": [
+        {
+          "lines": [
+            "8番 会沢",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "3回表",
+      "plays": [
+        {
+          "lines": [
+            "9番 佐藤柳",
+            "二ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "3回裏",
+      "plays": [
+        {
+          "lines": [
+            "5番 ボスラー",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "3回裏",
+      "plays": [
+        {
+          "lines": [
+            "6番 佐藤",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "3回裏",
+      "plays": [
+        {
+          "lines": [
+            "7番 山本",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "4回表",
+      "plays": [
+        {
+          "lines": [
+            "3番 小園",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "4回表",
+      "plays": [
+        {
+          "lines": [
+            "4番 ファビアン",
+            "遊ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "4回表",
+      "plays": [
+        {
+          "lines": [
+            "5番 末包",
+            "左安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "4回表",
+      "plays": [
+        {
+          "lines": [
+            "6番 モンテロ",
+            "右安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "4回表",
+      "plays": [
+        {
+          "lines": [
+            "7番 菊池",
+            "三ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "4回裏",
+      "plays": [
+        {
+          "lines": [
+            "1番 岡林",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "4回裏",
+      "plays": [
+        {
+          "lines": [
+            "8番 石伊",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "4回裏",
+      "plays": [
+        {
+          "lines": [
+            "9番 松葉",
+            "中飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "5回表",
+      "plays": [
+        {
+          "lines": [
+            "1番 中村奨",
+            "投安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "5回表",
+      "plays": [
+        {
+          "lines": [
+            "2番 羽月",
+            "遊ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "5回表",
+      "plays": [
+        {
+          "lines": [
+            "8番 会沢",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "5回表",
+      "plays": [
+        {
+          "lines": [
+            "打 中村健",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "5回裏",
+      "plays": [
+        {
+          "lines": [
+            "2番 田中",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "5回裏",
+      "plays": [
+        {
+          "lines": [
+            "3番 ブライト",
+            "投ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "5回裏",
+      "plays": [
+        {
+          "lines": [
+            "4番 細川",
+            "左２"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "5回裏",
+      "plays": [
+        {
+          "lines": [
+            "5番 ボスラー",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "6回表",
+      "plays": [
+        {
+          "lines": [
+            "3番 小園",
+            "二ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "6回表",
+      "plays": [
+        {
+          "lines": [
+            "4番 ファビアン",
+            "投ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "6回表",
+      "plays": [
+        {
+          "lines": [
+            "5番 末包",
+            "右安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "6回表",
+      "plays": [
+        {
+          "lines": [
+            "6番 モンテロ",
+            "中安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "6回表",
+      "plays": [
+        {
+          "lines": [
+            "7番 菊池",
+            "左２"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "6回表",
+      "plays": [
+        {
+          "lines": [
+            "8番 会沢",
+            "投ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "6回裏",
+      "plays": [
+        {
+          "lines": [
+            "6番 佐藤",
+            "遊ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "6回裏",
+      "plays": [
+        {
+          "lines": [
+            "7番 山本",
+            "二飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "6回裏",
+      "plays": [
+        {
+          "lines": [
+            "8番 石伊",
+            "遊飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "7回表",
+      "plays": [
+        {
+          "lines": [
+            "1番 中村奨",
+            "三安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "7回表",
+      "plays": [
+        {
+          "lines": [
+            "2番 羽月",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "7回表",
+      "plays": [
+        {
+          "lines": [
+            "3番 小園",
+            "右安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "7回表",
+      "plays": [
+        {
+          "lines": [
+            "4番 ファビアン",
+            "一邪"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "7回表",
+      "plays": [
+        {
+          "lines": [
+            "打 秋山",
+            "投直"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "7回裏",
+      "plays": [
+        {
+          "lines": [
+            "1番 岡林",
+            "右飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "7回裏",
+      "plays": [
+        {
+          "lines": [
+            "2番 田中",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "7回裏",
+      "plays": [
+        {
+          "lines": [
+            "打 大島",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "8回表",
+      "plays": [
+        {
+          "lines": [
+            "5番 末包",
+            "中飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "8回表",
+      "plays": [
+        {
+          "lines": [
+            "6番 モンテロ",
+            "左安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "8回表",
+      "plays": [
+        {
+          "lines": [
+            "7番 菊池",
+            "投ギ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "8回表",
+      "plays": [
+        {
+          "lines": [
+            "打 坂倉",
+            "敬遠"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "8回表",
+      "plays": [
+        {
+          "lines": [
+            "打 野間",
+            "二ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "8回裏",
+      "plays": [
+        {
+          "lines": [
+            "3番 ブライト",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "8回裏",
+      "plays": [
+        {
+          "lines": [
+            "4番 細川",
+            "遊ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "8回裏",
+      "plays": [
+        {
+          "lines": [
+            "5番 ボスラー",
+            "左２"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "8回裏",
+      "plays": [
+        {
+          "lines": [
+            "6番 佐藤",
+            "四球"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "8回裏",
+      "plays": [
+        {
+          "lines": [
+            "7番 山本",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "9回表",
+      "plays": [
+        {
+          "lines": [
+            "1番 中村奨",
+            "中飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "9回表",
+      "plays": [
+        {
+          "lines": [
+            "2番 羽月",
+            "捕安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "9回表",
+      "plays": [
+        {
+          "lines": [
+            "3番 小園",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "9回表",
+      "plays": [
+        {
+          "lines": [
+            "4番 ファビアン",
+            "敬遠"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "9回表",
+      "plays": [
+        {
+          "lines": [
+            "5番 末包",
+            "三ゴ"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "9回裏",
+      "plays": [
+        {
+          "lines": [
+            "1番 岡林",
+            "中飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "9回裏",
+      "plays": [
+        {
+          "lines": [
+            "8番 石伊",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "9回裏",
+      "plays": [
+        {
+          "lines": [
+            "打 辻本",
+            "右飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "10回表",
+      "plays": [
+        {
+          "lines": [
+            "1番 中村奨",
+            "右飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "10回表",
+      "plays": [
+        {
+          "lines": [
+            "打 田中",
+            "左飛"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "10回表",
+      "plays": [
+        {
+          "lines": [
+            "7番 菊池",
+            "中安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "10回表",
+      "plays": [
+        {
+          "lines": [
+            "打 坂倉",
+            "三振"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "10回表",
+      "plays": [
+        {
+          "lines": [
+            "打 上本",
+            "右安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "10回裏",
+      "plays": [
+        {
+          "lines": [
+            "2番 田中",
+            "右安"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "10回裏",
+      "plays": [
+        {
+          "lines": [
+            "3番 ブライト",
+            "二失"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "10回裏",
+      "plays": [
+        {
+          "lines": [
+            "4番 細川",
+            "敬遠"
+          ]
+        }
+      ]
+    },
+    {
+      "inning": "10回裏",
+      "plays": [
+        {
+          "lines": [
+            "5番 ボスラー",
+            "右安"
+          ]
+        }
+      ]
+    }
+  ],
+  "batter_stats": {
+    "広島": [
+      {
+        "player_name": "中村奨",
+        "ab": 6,
+        "h": 3,
+        "rbi": 0,
+        "avg": ".264",
+        "hr": 4
+      },
+      {
+        "player_name": "羽月",
+        "ab": 4,
+        "h": 1,
+        "rbi": 0,
+        "avg": ".296",
+        "hr": 0
+      },
+      {
+        "player_name": "小園",
+        "ab": 5,
+        "h": 1,
+        "rbi": 0,
+        "avg": ".289",
+        "hr": 2
+      },
+      {
+        "player_name": "ファビアン",
+        "ab": 4,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".296",
+        "hr": 10
+      },
+      {
+        "player_name": "末包",
+        "ab": 5,
+        "h": 3,
+        "rbi": 0,
+        "avg": ".252",
+        "hr": 7
+      },
+      {
+        "player_name": "モンテロ",
+        "ab": 4,
+        "h": 3,
+        "rbi": 0,
+        "avg": ".266",
+        "hr": 1
+      },
+      {
+        "player_name": "田中",
+        "ab": 1,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".167",
+        "hr": 0
+      },
+      {
+        "player_name": "菊池",
+        "ab": 4,
+        "h": 2,
+        "rbi": 2,
+        "avg": ".231",
+        "hr": 2
+      },
+      {
+        "player_name": "会沢",
+        "ab": 3,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".125",
+        "hr": 0
+      },
+      {
+        "player_name": "坂倉",
+        "ab": 1,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".272",
+        "hr": 3
+      },
+      {
+        "player_name": "佐藤柳",
+        "ab": 1,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".250",
+        "hr": 0
+      },
+      {
+        "player_name": "中村健",
+        "ab": 1,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".000",
+        "hr": 0
+      },
+      {
+        "player_name": "栗林",
+        "ab": 0,
+        "h": 0,
+        "rbi": 0,
+        "avg": "---",
+        "hr": 0
+      },
+      {
+        "player_name": "島内",
+        "ab": 0,
+        "h": 0,
+        "rbi": 0,
+        "avg": "---",
+        "hr": 0
+      },
+      {
+        "player_name": "秋山",
+        "ab": 1,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".259",
+        "hr": 1
+      },
+      {
+        "player_name": "中崎",
+        "ab": 0,
+        "h": 0,
+        "rbi": 0,
+        "avg": "---",
+        "hr": 0
+      },
+      {
+        "player_name": "野間",
+        "ab": 1,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".260",
+        "hr": 0
+      },
+      {
+        "player_name": "森浦",
+        "ab": 0,
+        "h": 0,
+        "rbi": 0,
+        "avg": "---",
+        "hr": 0
+      },
+      {
+        "player_name": "ハーン",
+        "ab": 0,
+        "h": 0,
+        "rbi": 0,
+        "avg": "---",
+        "hr": 0
+      },
+      {
+        "player_name": "上本",
+        "ab": 1,
+        "h": 1,
+        "rbi": 0,
+        "avg": ".208",
+        "hr": 0
+      },
+      {
+        "player_name": "遠藤",
+        "ab": 0,
+        "h": 0,
+        "rbi": 0,
+        "avg": "---",
+        "hr": 0
+      }
+    ],
+    "中日": [
+      {
+        "player_name": "岡林",
+        "ab": 5,
+        "h": 1,
+        "rbi": 0,
+        "avg": ".301",
+        "hr": 2
+      },
+      {
+        "player_name": "田中",
+        "ab": 4,
+        "h": 1,
+        "rbi": 0,
+        "avg": ".183",
+        "hr": 1
+      },
+      {
+        "player_name": "ブライト",
+        "ab": 4,
+        "h": 1,
+        "rbi": 1,
+        "avg": ".216",
+        "hr": 2
+      },
+      {
+        "player_name": "細川",
+        "ab": 4,
+        "h": 2,
+        "rbi": 1,
+        "avg": ".245",
+        "hr": 6
+      },
+      {
+        "player_name": "ボスラー",
+        "ab": 5,
+        "h": 2,
+        "rbi": 1,
+        "avg": ".232",
+        "hr": 7
+      },
+      {
+        "player_name": "佐藤",
+        "ab": 2,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".193",
+        "hr": 0
+      },
+      {
+        "player_name": "山本",
+        "ab": 4,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".235",
+        "hr": 2
+      },
+      {
+        "player_name": "石伊",
+        "ab": 4,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".250",
+        "hr": 1
+      },
+      {
+        "player_name": "松葉",
+        "ab": 1,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".167",
+        "hr": 0
+      },
+      {
+        "player_name": "大島",
+        "ab": 1,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".235",
+        "hr": 0
+      },
+      {
+        "player_name": "藤嶋",
+        "ab": 0,
+        "h": 0,
+        "rbi": 0,
+        "avg": "---",
+        "hr": 0
+      },
+      {
+        "player_name": "清水",
+        "ab": 0,
+        "h": 0,
+        "rbi": 0,
+        "avg": "---",
+        "hr": 0
+      },
+      {
+        "player_name": "辻本",
+        "ab": 1,
+        "h": 0,
+        "rbi": 0,
+        "avg": ".148",
+        "hr": 0
+      },
+      {
+        "player_name": "橋本",
+        "ab": 0,
+        "h": 0,
+        "rbi": 0,
+        "avg": "---",
+        "hr": 0
+      }
+    ]
+  },
+  "pitcher_stats": {
+    "佐藤柳": {
+      "win": 1,
+      "lose": 0,
+      "save": 0,
+      "games": 3,
+      "innings": "４",
+      "bf": 19,
+      "np": 82,
+      "h": 3,
+      "so": 3,
+      "bb": 4,
+      "hbp": 0,
+      "r": 2,
+      "er": 2,
+      "era": "1.80"
+    },
+    "栗林": {
+      "win": 1,
+      "lose": 1,
+      "save": 9,
+      "games": 34,
+      "innings": "１",
+      "bf": 4,
+      "np": 12,
+      "h": 1,
+      "so": 2,
+      "bb": 0,
+      "hbp": 0,
+      "r": 0,
+      "er": 0,
+      "era": "3.13"
+    },
+    "島内": {
+      "win": 2,
+      "lose": 1,
+      "save": 0,
+      "games": 34,
+      "innings": "１",
+      "bf": 3,
+      "np": 10,
+      "h": 0,
+      "so": 0,
+      "bb": 0,
+      "hbp": 0,
+      "r": 0,
+      "er": 0,
+      "era": "1.42"
+    },
+    "中崎": {
+      "win": 2,
+      "lose": 1,
+      "save": 0,
+      "games": 31,
+      "innings": "１",
+      "bf": 3,
+      "np": 7,
+      "h": 0,
+      "so": 0,
+      "bb": 0,
+      "hbp": 0,
+      "r": 0,
+      "er": 0,
+      "era": "0.65"
+    },
+    "森浦": {
+      "win": 2,
+      "lose": 2,
+      "save": 0,
+      "games": 36,
+      "innings": "１",
+      "bf": 5,
+      "np": 16,
+      "h": 1,
+      "so": 1,
+      "bb": 1,
+      "hbp": 0,
+      "r": 0,
+      "er": 0,
+      "era": "1.41"
+    },
+    "ハーン": {
+      "win": 1,
+      "lose": 1,
+      "save": 7,
+      "games": 30,
+      "innings": "１",
+      "bf": 3,
+      "np": 8,
+      "h": 0,
+      "so": 1,
+      "bb": 0,
+      "hbp": 0,
+      "r": 0,
+      "er": 0,
+      "era": "3.00"
+    },
+    "遠藤": {
+      "win": 0,
+      "lose": 1,
+      "save": 0,
+      "games": 3,
+      "innings": "０ 0/3",
+      "bf": 4,
+      "np": 13,
+      "h": 2,
+      "so": 0,
+      "bb": 1,
+      "hbp": 0,
+      "r": 1,
+      "er": 0,
+      "era": "0.00"
+    },
+    "松葉": {
+      "win": 7,
+      "lose": 6,
+      "save": 0,
+      "games": 16,
+      "innings": "７",
+      "bf": 31,
+      "np": 105,
+      "h": 10,
+      "so": 4,
+      "bb": 1,
+      "hbp": 0,
+      "r": 2,
+      "er": 2,
+      "era": "2.03"
+    },
+    "藤嶋": {
+      "win": 1,
+      "lose": 2,
+      "save": 1,
+      "games": 34,
+      "innings": "１",
+      "bf": 5,
+      "np": 16,
+      "h": 1,
+      "so": 0,
+      "bb": 1,
+      "hbp": 0,
+      "r": 0,
+      "er": 0,
+      "era": "2.90"
+    },
+    "清水": {
+      "win": 4,
+      "lose": 1,
+      "save": 2,
+      "games": 35,
+      "innings": "１",
+      "bf": 5,
+      "np": 14,
+      "h": 1,
+      "so": 0,
+      "bb": 1,
+      "hbp": 0,
+      "r": 0,
+      "er": 0,
+      "era": "1.56"
+    },
+    "橋本": {
+      "win": 1,
+      "lose": 0,
+      "save": 0,
+      "games": 29,
+      "innings": "１",
+      "bf": 5,
+      "np": 15,
+      "h": 2,
+      "so": 1,
+      "bb": 0,
+      "hbp": 0,
+      "r": 0,
+      "er": 0,
+      "era": "1.21"
+    }
+  },
+  "starting_pitchers": {
+    "表": "松葉",
+    "裏": "佐藤柳"
+  },
+  "at_bat_features": [
+    {
+      "inning": "1回表",
+      "batter": "中村奨",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2444,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0182
+    },
+    {
+      "inning": "1回表",
+      "batter": "羽月",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0626
+    },
+    {
+      "inning": "1回表",
+      "batter": "小園",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.3444,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": 0.0818
+    },
+    {
+      "inning": "1回表",
+      "batter": "ファビアン",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2921,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": 0.0295
+    },
+    {
+      "inning": "1回裏",
+      "batter": "岡林",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.3294,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.1189
+    },
+    {
+      "inning": "1回裏",
+      "batter": "田中",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1143,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": -0.0962
+    },
+    {
+      "inning": "1回裏",
+      "batter": "ブライト",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1579,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": -0.0526
+    },
+    {
+      "inning": "1回裏",
+      "batter": "細川",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.3103,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.0998
+    },
+    {
+      "inning": "1回裏",
+      "batter": "ボスラー",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.25,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.0395
+    },
+    {
+      "inning": "1回裏",
+      "batter": "佐藤",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1964,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": -0.0141
+    },
+    {
+      "inning": "1回裏",
+      "batter": "山本",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.2408,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.0303
+    },
+    {
+      "inning": "2回表",
+      "batter": "末包",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0626
+    },
+    {
+      "inning": "2回表",
+      "batter": "モンテロ",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2317,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0309
+    },
+    {
+      "inning": "2回表",
+      "batter": "菊池",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2143,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0483
+    },
+    {
+      "inning": "2回裏",
+      "batter": "岡林",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.3294,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.1189
+    },
+    {
+      "inning": "2回裏",
+      "batter": "田中",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1143,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": -0.0962
+    },
+    {
+      "inning": "2回裏",
+      "batter": "ブライト",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1579,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": -0.0526
+    },
+    {
+      "inning": "2回裏",
+      "batter": "細川",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.3103,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.0998
+    },
+    {
+      "inning": "2回裏",
+      "batter": "石伊",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.25,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.0395
+    },
+    {
+      "inning": "2回裏",
+      "batter": "松葉",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.6667,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.4562
+    },
+    {
+      "inning": "3回表",
+      "batter": "中村奨",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2444,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0182
+    },
+    {
+      "inning": "3回表",
+      "batter": "羽月",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0626
+    },
+    {
+      "inning": "3回表",
+      "batter": "会沢",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.0,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.2626
+    },
+    {
+      "inning": "3回表",
+      "batter": "佐藤柳",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.3333,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": 0.0707
+    },
+    {
+      "inning": "3回裏",
+      "batter": "ボスラー",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.25,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.0395
+    },
+    {
+      "inning": "3回裏",
+      "batter": "佐藤",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1964,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": -0.0141
+    },
+    {
+      "inning": "3回裏",
+      "batter": "山本",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.2408,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.0303
+    },
+    {
+      "inning": "4回表",
+      "batter": "小園",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.3444,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": 0.0818
+    },
+    {
+      "inning": "4回表",
+      "batter": "ファビアン",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2921,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": 0.0295
+    },
+    {
+      "inning": "4回表",
+      "batter": "末包",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0626
+    },
+    {
+      "inning": "4回表",
+      "batter": "モンテロ",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2317,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0309
+    },
+    {
+      "inning": "4回表",
+      "batter": "菊池",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2143,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0483
+    },
+    {
+      "inning": "4回裏",
+      "batter": "岡林",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.3294,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.1189
+    },
+    {
+      "inning": "4回裏",
+      "batter": "石伊",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.25,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.0395
+    },
+    {
+      "inning": "4回裏",
+      "batter": "松葉",
+      "pitcher": "佐藤柳",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.6667,
+      "pitcher_bavg_30d": 0.2105,
+      "contrast_feature": 0.4562
+    },
+    {
+      "inning": "5回表",
+      "batter": "中村奨",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2444,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0182
+    },
+    {
+      "inning": "5回表",
+      "batter": "羽月",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0626
+    },
+    {
+      "inning": "5回表",
+      "batter": "会沢",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.0,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.2626
+    },
+    {
+      "inning": "5回表",
+      "batter": "中村健",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.0,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.2626
+    },
+    {
+      "inning": "5回裏",
+      "batter": "田中",
+      "pitcher": "栗林",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1143,
+      "pitcher_bavg_30d": 0.2258,
+      "contrast_feature": -0.1115
+    },
+    {
+      "inning": "5回裏",
+      "batter": "ブライト",
+      "pitcher": "栗林",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1579,
+      "pitcher_bavg_30d": 0.2258,
+      "contrast_feature": -0.0679
+    },
+    {
+      "inning": "5回裏",
+      "batter": "細川",
+      "pitcher": "栗林",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.3103,
+      "pitcher_bavg_30d": 0.2258,
+      "contrast_feature": 0.0845
+    },
+    {
+      "inning": "5回裏",
+      "batter": "ボスラー",
+      "pitcher": "栗林",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.25,
+      "pitcher_bavg_30d": 0.2258,
+      "contrast_feature": 0.0242
+    },
+    {
+      "inning": "6回表",
+      "batter": "小園",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.3444,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": 0.0818
+    },
+    {
+      "inning": "6回表",
+      "batter": "ファビアン",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2921,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": 0.0295
+    },
+    {
+      "inning": "6回表",
+      "batter": "末包",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0626
+    },
+    {
+      "inning": "6回表",
+      "batter": "モンテロ",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2317,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0309
+    },
+    {
+      "inning": "6回表",
+      "batter": "菊池",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2143,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0483
+    },
+    {
+      "inning": "6回表",
+      "batter": "会沢",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.0,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.2626
+    },
+    {
+      "inning": "6回裏",
+      "batter": "佐藤",
+      "pitcher": "島内",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1964,
+      "pitcher_bavg_30d": 0.1481,
+      "contrast_feature": 0.0483
+    },
+    {
+      "inning": "6回裏",
+      "batter": "山本",
+      "pitcher": "島内",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.2408,
+      "pitcher_bavg_30d": 0.1481,
+      "contrast_feature": 0.0927
+    },
+    {
+      "inning": "6回裏",
+      "batter": "石伊",
+      "pitcher": "島内",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.25,
+      "pitcher_bavg_30d": 0.1481,
+      "contrast_feature": 0.1019
+    },
+    {
+      "inning": "7回表",
+      "batter": "中村奨",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2444,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0182
+    },
+    {
+      "inning": "7回表",
+      "batter": "羽月",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0626
+    },
+    {
+      "inning": "7回表",
+      "batter": "小園",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.3444,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": 0.0818
+    },
+    {
+      "inning": "7回表",
+      "batter": "ファビアン",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2921,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": 0.0295
+    },
+    {
+      "inning": "7回表",
+      "batter": "秋山",
+      "pitcher": "松葉",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.25,
+      "pitcher_bavg_30d": 0.2626,
+      "contrast_feature": -0.0126
+    },
+    {
+      "inning": "7回裏",
+      "batter": "岡林",
+      "pitcher": "中崎",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.3294,
+      "pitcher_bavg_30d": 0.25,
+      "contrast_feature": 0.0794
+    },
+    {
+      "inning": "7回裏",
+      "batter": "田中",
+      "pitcher": "中崎",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1143,
+      "pitcher_bavg_30d": 0.25,
+      "contrast_feature": -0.1357
+    },
+    {
+      "inning": "7回裏",
+      "batter": "大島",
+      "pitcher": "中崎",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.2308,
+      "pitcher_bavg_30d": 0.25,
+      "contrast_feature": -0.0192
+    },
+    {
+      "inning": "8回表",
+      "batter": "末包",
+      "pitcher": "藤嶋",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.1786,
+      "contrast_feature": 0.0214
+    },
+    {
+      "inning": "8回表",
+      "batter": "モンテロ",
+      "pitcher": "藤嶋",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2317,
+      "pitcher_bavg_30d": 0.1786,
+      "contrast_feature": 0.0531
+    },
+    {
+      "inning": "8回表",
+      "batter": "菊池",
+      "pitcher": "藤嶋",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2143,
+      "pitcher_bavg_30d": 0.1786,
+      "contrast_feature": 0.0357
+    },
+    {
+      "inning": "8回表",
+      "batter": "坂倉",
+      "pitcher": "藤嶋",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2571,
+      "pitcher_bavg_30d": 0.1786,
+      "contrast_feature": 0.0785
+    },
+    {
+      "inning": "8回表",
+      "batter": "野間",
+      "pitcher": "藤嶋",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2174,
+      "pitcher_bavg_30d": 0.1786,
+      "contrast_feature": 0.0388
+    },
+    {
+      "inning": "8回裏",
+      "batter": "ブライト",
+      "pitcher": "森浦",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1579,
+      "pitcher_bavg_30d": 0.28,
+      "contrast_feature": -0.1221
+    },
+    {
+      "inning": "8回裏",
+      "batter": "細川",
+      "pitcher": "森浦",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.3103,
+      "pitcher_bavg_30d": 0.28,
+      "contrast_feature": 0.0303
+    },
+    {
+      "inning": "8回裏",
+      "batter": "ボスラー",
+      "pitcher": "森浦",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.25,
+      "pitcher_bavg_30d": 0.28,
+      "contrast_feature": -0.03
+    },
+    {
+      "inning": "8回裏",
+      "batter": "佐藤",
+      "pitcher": "森浦",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1964,
+      "pitcher_bavg_30d": 0.28,
+      "contrast_feature": -0.0836
+    },
+    {
+      "inning": "8回裏",
+      "batter": "山本",
+      "pitcher": "森浦",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.2408,
+      "pitcher_bavg_30d": 0.28,
+      "contrast_feature": -0.0392
+    },
+    {
+      "inning": "9回表",
+      "batter": "中村奨",
+      "pitcher": "清水",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2444,
+      "pitcher_bavg_30d": 0.2791,
+      "contrast_feature": -0.0347
+    },
+    {
+      "inning": "9回表",
+      "batter": "羽月",
+      "pitcher": "清水",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.2791,
+      "contrast_feature": -0.0791
+    },
+    {
+      "inning": "9回表",
+      "batter": "小園",
+      "pitcher": "清水",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.3444,
+      "pitcher_bavg_30d": 0.2791,
+      "contrast_feature": 0.0653
+    },
+    {
+      "inning": "9回表",
+      "batter": "ファビアン",
+      "pitcher": "清水",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2921,
+      "pitcher_bavg_30d": 0.2791,
+      "contrast_feature": 0.013
+    },
+    {
+      "inning": "9回表",
+      "batter": "末包",
+      "pitcher": "清水",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.2791,
+      "contrast_feature": -0.0791
+    },
+    {
+      "inning": "9回裏",
+      "batter": "岡林",
+      "pitcher": "ハーン",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.3294,
+      "pitcher_bavg_30d": 0.2424,
+      "contrast_feature": 0.087
+    },
+    {
+      "inning": "9回裏",
+      "batter": "石伊",
+      "pitcher": "ハーン",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.25,
+      "pitcher_bavg_30d": 0.2424,
+      "contrast_feature": 0.0076
+    },
+    {
+      "inning": "9回裏",
+      "batter": "辻本",
+      "pitcher": "ハーン",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.2,
+      "pitcher_bavg_30d": 0.2424,
+      "contrast_feature": -0.0424
+    },
+    {
+      "inning": "10回表",
+      "batter": "中村奨",
+      "pitcher": "橋本",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2444,
+      "pitcher_bavg_30d": 0.2703,
+      "contrast_feature": -0.0259
+    },
+    {
+      "inning": "10回表",
+      "batter": "田中",
+      "pitcher": "橋本",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.1143,
+      "pitcher_bavg_30d": 0.2703,
+      "contrast_feature": -0.156
+    },
+    {
+      "inning": "10回表",
+      "batter": "菊池",
+      "pitcher": "橋本",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2143,
+      "pitcher_bavg_30d": 0.2703,
+      "contrast_feature": -0.056
+    },
+    {
+      "inning": "10回表",
+      "batter": "坂倉",
+      "pitcher": "橋本",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.2571,
+      "pitcher_bavg_30d": 0.2703,
+      "contrast_feature": -0.0132
+    },
+    {
+      "inning": "10回表",
+      "batter": "上本",
+      "pitcher": "橋本",
+      "batting_team": "広島",
+      "batter_avg_30d": 0.1875,
+      "pitcher_bavg_30d": 0.2703,
+      "contrast_feature": -0.0828
+    },
+    {
+      "inning": "10回裏",
+      "batter": "田中",
+      "pitcher": "遠藤",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1143,
+      "pitcher_bavg_30d": 0.1429,
+      "contrast_feature": -0.0286
+    },
+    {
+      "inning": "10回裏",
+      "batter": "ブライト",
+      "pitcher": "遠藤",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.1579,
+      "pitcher_bavg_30d": 0.1429,
+      "contrast_feature": 0.015
+    },
+    {
+      "inning": "10回裏",
+      "batter": "細川",
+      "pitcher": "遠藤",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.3103,
+      "pitcher_bavg_30d": 0.1429,
+      "contrast_feature": 0.1674
+    },
+    {
+      "inning": "10回裏",
+      "batter": "ボスラー",
+      "pitcher": "遠藤",
+      "batting_team": "中日",
+      "batter_avg_30d": 0.25,
+      "pitcher_bavg_30d": 0.1429,
+      "contrast_feature": 0.1071
+    }
+  ]
+}
