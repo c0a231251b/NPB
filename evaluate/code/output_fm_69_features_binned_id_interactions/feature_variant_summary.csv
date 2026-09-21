@@ -1,0 +1,4 @@
+﻿variant,description,n_categorical_features,n_numeric_features,n_total_features
+raw_69_features,69特徴量そのままFM。カテゴリ特徴量 + 連続値特徴量を標準化して使用。,16,77,93
+binned_numeric_features,連続値カテゴリ化FM。数値特徴量をbin化し、すべてカテゴリとして使用。,93,0,93
+binned_id_interactions,連続値カテゴリ化 + ID相互作用特徴量FM。,113,0,113

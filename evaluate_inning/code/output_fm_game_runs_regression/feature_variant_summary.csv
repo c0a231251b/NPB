@@ -1,0 +1,4 @@
+﻿variant,n_categorical_features,n_numeric_features,n_total_features
+all_game_features,6,6,12
+selected_game_features,5,5,10
+binned_game_features,11,0,11

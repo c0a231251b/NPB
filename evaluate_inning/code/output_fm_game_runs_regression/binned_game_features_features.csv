@@ -1,0 +1,12 @@
+﻿feature,feature_type
+team_id,categorical
+opponent_team_id,categorical
+home_away,categorical
+stadium_id,categorical
+starting_pitcher_id,categorical
+top_bottom_cat,categorical
+team_avg_runs_7d_bin,categorical
+opponent_avg_runs_7d_bin,categorical
+opponent_avg_runs_allowed_7d_bin,categorical
+opponent_starter_era_bin,categorical
+pitcher_era_before_inning_bin,categorical

@@ -1,0 +1,187 @@
+{
+  "categorical_features": [
+    "batter_id",
+    "pitcher_id",
+    "stadium_id",
+    "Home_Away_id",
+    "batter_hand",
+    "pitcher_hand",
+    "previous_result1",
+    "previous_result2",
+    "previous_result3",
+    "previous_result4",
+    "previous_result5",
+    "base_out_state",
+    "inning_out_state",
+    "bat_order_runner_state"
+  ],
+  "numeric_features": [
+    "bat_order",
+    "inning",
+    "top_bottom",
+    "out_count",
+    "runner1",
+    "runner2",
+    "runner3",
+    "score_diff",
+    "batter_avg",
+    "batter_ops",
+    "batter_obp",
+    "batter_slg",
+    "batter_iso",
+    "pitcher_era",
+    "pitcher_k9",
+    "pitcher_whip",
+    "pitcher_ops",
+    "vs_ops",
+    "batter_vs_rhp_avg",
+    "batter_vs_rhp_ops",
+    "batter_vs_lhp_avg",
+    "batter_vs_lhp_ops",
+    "pitcher_vs_rhb_avg",
+    "pitcher_vs_rhb_ops",
+    "pitcher_vs_lhb_avg",
+    "pitcher_vs_lhb_ops",
+    "batter_recent_5pa_ops",
+    "batter_recent_10pa_avg",
+    "batter_recent_10pa_ops",
+    "batter_recent_10pa_k_rate",
+    "batter_recent_10pa_bb_rate",
+    "pitcher_recent_bf_avg",
+    "pitcher_recent_bf_ops",
+    "pitcher_recent_bf_k_rate",
+    "pitcher_recent_bf_bb_rate",
+    "runner_count",
+    "is_leadoff_batter_in_inning",
+    "batting_turn_in_game",
+    "batter_k_rate",
+    "batter_bb_rate",
+    "batter_hr_rate",
+    "batter_xbh_rate",
+    "batter_pa_count",
+    "pitcher_k_rate",
+    "pitcher_bb_rate",
+    "pitcher_hr_rate",
+    "pitcher_xbh_rate_allowed",
+    "pitcher_bf_count",
+    "batter_hit_rate",
+    "batter_out_rate",
+    "pitcher_hit_rate_allowed",
+    "pitcher_out_rate",
+    "pitcher_bf_in_game",
+    "batter_onbase_event_rate",
+    "pitcher_onbase_event_rate_allowed",
+    "vs_pa_count",
+    "vs_hit_rate",
+    "vs_k_rate",
+    "vs_bb_rate",
+    "vs_xbh_rate",
+    "is_no_out_runner_on",
+    "is_two_out",
+    "month"
+  ],
+  "base_numeric_features": [
+    "bat_order",
+    "inning",
+    "top_bottom",
+    "out_count",
+    "runner1",
+    "runner2",
+    "runner3",
+    "score_diff",
+    "batter_avg",
+    "batter_ops",
+    "batter_obp",
+    "batter_slg",
+    "batter_iso",
+    "pitcher_era",
+    "pitcher_k9",
+    "pitcher_whip",
+    "pitcher_ops",
+    "vs_ops"
+  ],
+  "hand_split_numeric_features": [
+    "batter_vs_rhp_avg",
+    "batter_vs_rhp_ops",
+    "batter_vs_lhp_avg",
+    "batter_vs_lhp_ops",
+    "pitcher_vs_rhb_avg",
+    "pitcher_vs_rhb_ops",
+    "pitcher_vs_lhb_avg",
+    "pitcher_vs_lhb_ops"
+  ],
+  "recent_numeric_features": [
+    "batter_recent_5pa_ops",
+    "batter_recent_10pa_avg",
+    "batter_recent_10pa_ops",
+    "batter_recent_10pa_k_rate",
+    "batter_recent_10pa_bb_rate",
+    "pitcher_recent_bf_avg",
+    "pitcher_recent_bf_ops",
+    "pitcher_recent_bf_k_rate",
+    "pitcher_recent_bf_bb_rate"
+  ],
+  "context_numeric_features": [
+    "runner_count",
+    "is_leadoff_batter_in_inning",
+    "batting_turn_in_game"
+  ],
+  "cumulative_rate_numeric_features": [
+    "batter_k_rate",
+    "batter_bb_rate",
+    "batter_hr_rate",
+    "batter_xbh_rate",
+    "batter_pa_count",
+    "pitcher_k_rate",
+    "pitcher_bb_rate",
+    "pitcher_hr_rate",
+    "pitcher_xbh_rate_allowed",
+    "pitcher_bf_count"
+  ],
+  "event_context_numeric_features": [
+    "batter_hit_rate",
+    "batter_out_rate",
+    "pitcher_hit_rate_allowed",
+    "pitcher_out_rate",
+    "pitcher_bf_in_game"
+  ],
+  "event_context_categorical_features": [
+    "base_out_state"
+  ],
+  "added_from_37_features": [
+    "batter_hit_rate",
+    "batter_out_rate",
+    "pitcher_hit_rate_allowed",
+    "pitcher_out_rate",
+    "pitcher_bf_in_game",
+    "base_out_state"
+  ],
+  "target_definition": {
+    "SINGLE": [
+      "SINGLE"
+    ],
+    "XBH": [
+      "DOUBLE",
+      "TRIPLE",
+      "HR"
+    ],
+    "BB_HBP": [
+      "BB",
+      "HBP"
+    ],
+    "SO": [
+      "SO"
+    ],
+    "OUT": [
+      "OUT"
+    ]
+  },
+  "class_weight": "balanced",
+  "labels": [
+    "SINGLE",
+    "XBH",
+    "BB_HBP",
+    "SO",
+    "OUT"
+  ]
+}

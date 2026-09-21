@@ -1,0 +1,8 @@
+              precision    recall  f1-score   support
+
+      NO_RUN   0.794694  0.752183  0.772855       916
+  RUN_SCORED   0.260586  0.310078  0.283186       258
+
+    accuracy                       0.655026      1174
+   macro avg   0.527640  0.531130  0.528020      1174
+weighted avg   0.677318  0.655026  0.665244      1174

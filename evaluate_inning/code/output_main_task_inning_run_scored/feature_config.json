@@ -1,0 +1,42 @@
+{
+  "task": "main_inning_run_scored",
+  "target": "target_run_scored / NO_RUN vs RUN_SCORED",
+  "feature_policy": "inning-start information: batting order, opponent pitcher, team state, stadium, recent scoring tendency",
+  "categorical_features": [
+    "team_id",
+    "opponent_team_id",
+    "home_away",
+    "stadium_id",
+    "starting_pitcher_id",
+    "current_pitcher_id",
+    "batting_order_start_group"
+  ],
+  "numeric_features": [
+    "inning",
+    "top_bottom",
+    "is_late_inning",
+    "batting_order_start",
+    "is_top_order_start",
+    "is_cleanup_start",
+    "pitcher_is_starter",
+    "pitcher_times_through_order",
+    "pitcher_era_before_inning",
+    "opponent_starter_era",
+    "team_avg_runs_7d",
+    "opponent_avg_runs_7d",
+    "opponent_avg_runs_allowed_7d",
+    "team_run_scored_inning_rate_7d",
+    "opponent_run_allowed_inning_rate_7d",
+    "team_recent_2plus_inning_rate_7d",
+    "opponent_recent_2plus_allowed_rate_7d"
+  ],
+  "excluded_as_default": [
+    "score_diff_before_inning",
+    "team_runs_before_inning",
+    "opponent_runs_before_inning"
+  ],
+  "labels": [
+    "NO_RUN",
+    "RUN_SCORED"
+  ]
+}

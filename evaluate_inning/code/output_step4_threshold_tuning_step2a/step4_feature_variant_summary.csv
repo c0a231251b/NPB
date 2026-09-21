@@ -1,0 +1,3 @@
+﻿variant,model,description,n_categorical_features,n_numeric_features,n_total_features
+lgbm_step2a_raw_32_features,lightgbm,LightGBM Step2A raw 32 features. Threshold is tuned on valid.,8,24,32
+fm_step2a_binned_features,fm,FM Step2A binned features. Threshold is tuned on valid.,30,0,30

@@ -1,0 +1,5 @@
+﻿variant,model,description,n_categorical_features,n_numeric_features,n_total_features
+lgbm_step2a_raw_32_features,lightgbm,LightGBM reference: Step2A raw 32 features.,8,24,32
+fm_step2a_raw_32_features,fm,FM baseline: Step2A raw categorical + scaled numeric features.,8,24,32
+fm_step2a_binned_features,fm,FM-friendly: Step2A numeric/context features converted to categorical bins.,30,0,30
+fm_step2a_binned_cross_features,fm,FM-friendly: bins + explicit cross features.,42,0,42

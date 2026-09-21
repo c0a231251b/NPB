@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Virtual environment
+.conda/
+.venv/
+venv/
+
+# Trained models
+*.pt
+*.pth
+
+# Temporary status files
+status*.text

@@ -1,0 +1,3 @@
+﻿model,base_model,n_categorical_features,n_numeric_features,n_total_features,best_iteration,best_epoch,best_valid_loss
+lgbm_step2a_raw_32_features,lightgbm,8,24,32,579.0,,
+fm_step2a_binned_features,fm,30,0,30,,3.0,1.0411518574399323

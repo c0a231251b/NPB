@@ -1,0 +1,4 @@
+﻿variant,description,n_categorical_features,n_numeric_features,n_total_features
+score_context_28_features,Step1: score contextあり。,8,20,28
+lineup_strength_32_features,Step2: score context + 通常の次の3/4打者能力特徴量。,8,24,32
+lineup_vs_pitcher_hand_32_features,Step2A: score context + 相手投手左右に応じた次の3/4打者能力特徴量。,8,24,32

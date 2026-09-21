@@ -1,0 +1,686 @@
+{
+  "bat_order": {
+    "method": "fixed_rule",
+    "bin_col": "bat_order_bin"
+  },
+  "inning": {
+    "method": "fixed_rule",
+    "bin_col": "inning_bin"
+  },
+  "top_bottom": {
+    "method": "fixed_rule",
+    "bin_col": "top_bottom_bin"
+  },
+  "out_count": {
+    "method": "fixed_rule",
+    "bin_col": "out_count_bin"
+  },
+  "runner1": {
+    "method": "fixed_rule",
+    "bin_col": "runner1_bin"
+  },
+  "runner2": {
+    "method": "fixed_rule",
+    "bin_col": "runner2_bin"
+  },
+  "runner3": {
+    "method": "fixed_rule",
+    "bin_col": "runner3_bin"
+  },
+  "score_diff": {
+    "method": "fixed_rule",
+    "bin_col": "score_diff_bin"
+  },
+  "batter_avg": {
+    "method": "train_quantile",
+    "bin_col": "batter_avg_bin",
+    "edges": [
+      -Infinity,
+      0.2035,
+      0.2381,
+      0.2604,
+      0.2828,
+      Infinity
+    ]
+  },
+  "batter_ops": {
+    "method": "train_quantile",
+    "bin_col": "batter_ops_bin",
+    "edges": [
+      -Infinity,
+      0.543,
+      0.6268,
+      0.6911,
+      0.7534,
+      Infinity
+    ]
+  },
+  "batter_obp": {
+    "method": "train_quantile",
+    "bin_col": "batter_obp_bin",
+    "edges": [
+      -Infinity,
+      0.2632,
+      0.2973,
+      0.321,
+      0.3483,
+      Infinity
+    ]
+  },
+  "batter_slg": {
+    "method": "train_quantile",
+    "bin_col": "batter_slg_bin",
+    "edges": [
+      -Infinity,
+      0.2697,
+      0.3277,
+      0.3667,
+      0.4123,
+      Infinity
+    ]
+  },
+  "batter_iso": {
+    "method": "train_quantile",
+    "bin_col": "batter_iso_bin",
+    "edges": [
+      -Infinity,
+      0.0447,
+      0.0792,
+      0.1041,
+      0.1445,
+      Infinity
+    ]
+  },
+  "pitcher_era": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_era_bin",
+    "edges": [
+      -Infinity,
+      6.6,
+      7.3456,
+      7.9963,
+      8.7831,
+      Infinity
+    ]
+  },
+  "pitcher_k9": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_k9_bin",
+    "edges": [
+      -Infinity,
+      3.785,
+      4.781060000000002,
+      5.4915,
+      6.6343,
+      Infinity
+    ]
+  },
+  "pitcher_whip": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_whip_bin",
+    "edges": [
+      -Infinity,
+      0.7059,
+      0.7907,
+      0.863,
+      0.9474,
+      Infinity
+    ]
+  },
+  "pitcher_ops": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_ops_bin",
+    "edges": [
+      -Infinity,
+      0.5005,
+      0.5751,
+      0.6316,
+      0.7009,
+      Infinity
+    ]
+  },
+  "vs_ops": {
+    "method": "train_quantile",
+    "bin_col": "vs_ops_bin",
+    "edges": [
+      -Infinity,
+      0.5362600000000122,
+      1.0,
+      Infinity
+    ]
+  },
+  "batter_vs_rhp_avg": {
+    "method": "train_quantile",
+    "bin_col": "batter_vs_rhp_avg_bin",
+    "edges": [
+      -Infinity,
+      0.2,
+      0.242718,
+      0.269231,
+      0.298701,
+      Infinity
+    ]
+  },
+  "batter_vs_rhp_ops": {
+    "method": "train_quantile",
+    "bin_col": "batter_vs_rhp_ops_bin",
+    "edges": [
+      -Infinity,
+      0.5372146000000001,
+      0.645046,
+      0.7183924,
+      0.7948346000000001,
+      Infinity
+    ]
+  },
+  "batter_vs_lhp_avg": {
+    "method": "train_quantile",
+    "bin_col": "batter_vs_lhp_avg_bin",
+    "edges": [
+      -Infinity,
+      0.170213,
+      0.227273,
+      0.266667,
+      0.314286,
+      Infinity
+    ]
+  },
+  "batter_vs_lhp_ops": {
+    "method": "train_quantile",
+    "bin_col": "batter_vs_lhp_ops_bin",
+    "edges": [
+      -Infinity,
+      0.44233,
+      0.5907346000000001,
+      0.694118,
+      0.818182,
+      Infinity
+    ]
+  },
+  "pitcher_vs_rhb_avg": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_vs_rhb_avg_bin",
+    "edges": [
+      -Infinity,
+      0.173333,
+      0.214286,
+      0.243243,
+      0.282051,
+      Infinity
+    ]
+  },
+  "pitcher_vs_rhb_ops": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_vs_rhb_ops_bin",
+    "edges": [
+      -Infinity,
+      0.4783394000000002,
+      0.572587,
+      0.6480566000000001,
+      0.754813,
+      Infinity
+    ]
+  },
+  "pitcher_vs_lhb_avg": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_vs_lhb_avg_bin",
+    "edges": [
+      -Infinity,
+      0.169492,
+      0.214286,
+      0.245455,
+      0.285714,
+      Infinity
+    ]
+  },
+  "pitcher_vs_lhb_ops": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_vs_lhb_ops_bin",
+    "edges": [
+      -Infinity,
+      0.452381,
+      0.550505,
+      0.6287096000000001,
+      0.7342978000000002,
+      Infinity
+    ]
+  },
+  "batter_recent_5pa_ops": {
+    "method": "train_quantile",
+    "bin_col": "batter_recent_5pa_ops_bin",
+    "edges": [
+      -Infinity,
+      0.2,
+      0.4,
+      0.65,
+      1.066666667,
+      Infinity
+    ]
+  },
+  "batter_recent_10pa_avg": {
+    "method": "train_quantile",
+    "bin_col": "batter_recent_10pa_avg_bin",
+    "edges": [
+      -Infinity,
+      0.111111111,
+      0.2,
+      0.285714286,
+      0.375,
+      Infinity
+    ]
+  },
+  "batter_recent_10pa_ops": {
+    "method": "train_quantile",
+    "bin_col": "batter_recent_10pa_ops_bin",
+    "edges": [
+      -Infinity,
+      0.311111111,
+      0.522222222,
+      0.7,
+      0.966666667,
+      Infinity
+    ]
+  },
+  "batter_recent_10pa_k_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_recent_10pa_k_rate_bin",
+    "edges": [
+      -Infinity,
+      0.1,
+      0.2,
+      0.3,
+      Infinity
+    ]
+  },
+  "batter_recent_10pa_bb_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_recent_10pa_bb_rate_bin",
+    "edges": [
+      -Infinity,
+      0.1,
+      Infinity
+    ]
+  },
+  "pitcher_recent_bf_avg": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_recent_bf_avg_bin",
+    "edges": [
+      -Infinity,
+      0.111111111,
+      0.2,
+      0.25,
+      0.375,
+      Infinity
+    ]
+  },
+  "pitcher_recent_bf_ops": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_recent_bf_ops_bin",
+    "edges": [
+      -Infinity,
+      0.311111111,
+      0.522222222,
+      0.7,
+      0.944444444,
+      Infinity
+    ]
+  },
+  "pitcher_recent_bf_k_rate": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_recent_bf_k_rate_bin",
+    "edges": [
+      -Infinity,
+      0.1,
+      0.2,
+      0.3,
+      Infinity
+    ]
+  },
+  "pitcher_recent_bf_bb_rate": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_recent_bf_bb_rate_bin",
+    "edges": [
+      -Infinity,
+      0.1,
+      Infinity
+    ]
+  },
+  "runner_count": {
+    "method": "fixed_rule",
+    "bin_col": "runner_count_bin"
+  },
+  "is_leadoff_batter_in_inning": {
+    "method": "fixed_rule",
+    "bin_col": "is_leadoff_batter_in_inning_bin"
+  },
+  "batting_turn_in_game": {
+    "method": "fixed_rule",
+    "bin_col": "batting_turn_in_game_bin"
+  },
+  "batter_k_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_k_rate_bin",
+    "edges": [
+      -Infinity,
+      0.119047619,
+      0.154639175,
+      0.192307692,
+      0.24462284260000017,
+      Infinity
+    ]
+  },
+  "batter_bb_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_bb_rate_bin",
+    "edges": [
+      -Infinity,
+      0.032258065,
+      0.058201058,
+      0.077181208,
+      0.098039216,
+      Infinity
+    ]
+  },
+  "batter_hr_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_hr_rate_bin",
+    "edges": [
+      -Infinity,
+      0.005882353,
+      0.015625,
+      0.027777778,
+      Infinity
+    ]
+  },
+  "batter_xbh_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_xbh_rate_bin",
+    "edges": [
+      -Infinity,
+      0.030477670400000025,
+      0.049689441,
+      0.0625,
+      0.08,
+      Infinity
+    ]
+  },
+  "batter_pa_count": {
+    "method": "fixed_rule",
+    "bin_col": "batter_pa_count_bin"
+  },
+  "pitcher_k_rate": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_k_rate_bin",
+    "edges": [
+      -Infinity,
+      0.133333333,
+      0.173913043,
+      0.201612903,
+      0.2462153934,
+      Infinity
+    ]
+  },
+  "pitcher_bb_rate": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_bb_rate_bin",
+    "edges": [
+      -Infinity,
+      0.038043478,
+      0.056603774,
+      0.071428571,
+      0.090909091,
+      Infinity
+    ]
+  },
+  "pitcher_hr_rate": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_hr_rate_bin",
+    "edges": [
+      -Infinity,
+      0.008196721,
+      0.014625229,
+      0.02238806,
+      Infinity
+    ]
+  },
+  "pitcher_xbh_rate_allowed": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_xbh_rate_allowed_bin",
+    "edges": [
+      -Infinity,
+      0.029850746,
+      0.046153846,
+      0.056603774,
+      0.069767442,
+      Infinity
+    ]
+  },
+  "pitcher_bf_count": {
+    "method": "fixed_rule",
+    "bin_col": "pitcher_bf_count_bin"
+  },
+  "batter_hit_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_hit_rate_bin",
+    "edges": [
+      -Infinity,
+      0.09460841940000006,
+      0.192307692,
+      0.2890263728000002,
+      0.506410256,
+      Infinity
+    ]
+  },
+  "batter_out_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_out_rate_bin",
+    "edges": [
+      -Infinity,
+      0.235294118,
+      0.430232558,
+      0.631578947,
+      1.125,
+      Infinity
+    ]
+  },
+  "pitcher_hit_rate_allowed": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_hit_rate_allowed_bin",
+    "edges": [
+      -Infinity,
+      0.159090909,
+      0.196078431,
+      0.222222222,
+      0.25974026,
+      Infinity
+    ]
+  },
+  "pitcher_out_rate": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_out_rate_bin",
+    "edges": [
+      -Infinity,
+      0.444444444,
+      0.5,
+      0.5446903598,
+      0.6,
+      Infinity
+    ]
+  },
+  "pitcher_bf_in_game": {
+    "method": "fixed_rule",
+    "bin_col": "pitcher_bf_in_game_bin"
+  },
+  "batter_onbase_event_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_onbase_event_rate_bin",
+    "edges": [
+      -Infinity,
+      0.25597142860000005,
+      0.295454545,
+      0.323529412,
+      0.349112426,
+      Infinity
+    ]
+  },
+  "pitcher_onbase_event_rate_allowed": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_onbase_event_rate_allowed_bin",
+    "edges": [
+      -Infinity,
+      0.241935484,
+      0.270627063,
+      0.295454545,
+      0.325301205,
+      Infinity
+    ]
+  },
+  "vs_pa_count": {
+    "method": "fixed_rule",
+    "bin_col": "vs_pa_count_bin"
+  },
+  "vs_hit_rate": {
+    "method": "train_quantile",
+    "bin_col": "vs_hit_rate_bin",
+    "edges": [
+      -Infinity,
+      0.2,
+      0.5,
+      Infinity
+    ]
+  },
+  "vs_k_rate": {
+    "method": "train_quantile",
+    "bin_col": "vs_k_rate_bin",
+    "edges": [
+      -Infinity,
+      0.333333333,
+      Infinity
+    ]
+  },
+  "vs_bb_rate": {
+    "method": "train_quantile",
+    "bin_col": "vs_bb_rate_bin",
+    "edges": []
+  },
+  "vs_xbh_rate": {
+    "method": "train_quantile",
+    "bin_col": "vs_xbh_rate_bin",
+    "edges": []
+  },
+  "is_no_out_runner_on": {
+    "method": "fixed_rule",
+    "bin_col": "is_no_out_runner_on_bin"
+  },
+  "is_two_out": {
+    "method": "fixed_rule",
+    "bin_col": "is_two_out_bin"
+  },
+  "month": {
+    "method": "fixed_rule",
+    "bin_col": "month_bin"
+  },
+  "batter_groundout_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_groundout_rate_bin",
+    "edges": [
+      -Infinity,
+      0.162162162,
+      0.196721311,
+      0.22939227760000006,
+      0.274285714,
+      Infinity
+    ]
+  },
+  "batter_flyout_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_flyout_rate_bin",
+    "edges": [
+      -Infinity,
+      0.172043011,
+      0.214953271,
+      0.25,
+      0.2821517484000001,
+      Infinity
+    ]
+  },
+  "batter_gdp_rate": {
+    "method": "train_quantile",
+    "bin_col": "batter_gdp_rate_bin",
+    "edges": [
+      -Infinity,
+      0.008333333,
+      0.015873016,
+      0.025104603,
+      Infinity
+    ]
+  },
+  "pitcher_groundout_rate": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_groundout_rate_bin",
+    "edges": [
+      -Infinity,
+      0.1745385938,
+      0.214285714,
+      0.237762238,
+      0.267973856,
+      Infinity
+    ]
+  },
+  "pitcher_flyout_rate": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_flyout_rate_bin",
+    "edges": [
+      -Infinity,
+      0.1835399616,
+      0.212328767,
+      0.244680851,
+      0.28462690900000004,
+      Infinity
+    ]
+  },
+  "pitcher_gdp_rate": {
+    "method": "train_quantile",
+    "bin_col": "pitcher_gdp_rate_bin",
+    "edges": [
+      -Infinity,
+      0.010344828,
+      0.016393443,
+      0.024,
+      Infinity
+    ]
+  },
+  "vs_hr_rate": {
+    "method": "train_quantile",
+    "bin_col": "vs_hr_rate_bin",
+    "edges": []
+  },
+  "is_cleanup": {
+    "method": "fixed_rule",
+    "bin_col": "is_cleanup_bin"
+  },
+  "is_bottom_order": {
+    "method": "fixed_rule",
+    "bin_col": "is_bottom_order_bin"
+  },
+  "days_since_last_game_batter": {
+    "method": "fixed_rule",
+    "bin_col": "days_since_last_game_batter_bin"
+  },
+  "days_since_last_game_pitcher": {
+    "method": "fixed_rule",
+    "bin_col": "days_since_last_game_pitcher_bin"
+  },
+  "pitcher_batter_times_faced_in_game": {
+    "method": "fixed_rule",
+    "bin_col": "pitcher_batter_times_faced_in_game_bin"
+  },
+  "is_interleague": {
+    "method": "fixed_rule",
+    "bin_col": "is_interleague_bin"
+  },
+  "season_progress": {
+    "method": "fixed_rule",
+    "bin_col": "season_progress_bin"
+  }
+}

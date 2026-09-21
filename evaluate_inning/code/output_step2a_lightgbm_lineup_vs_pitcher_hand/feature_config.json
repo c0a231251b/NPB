@@ -1,0 +1,63 @@
+{
+  "base_categorical_features": [
+    "team_id",
+    "opponent_team_id",
+    "home_away",
+    "stadium_id",
+    "starting_pitcher_id",
+    "current_pitcher_id",
+    "batting_order_start_group"
+  ],
+  "base_numeric_features": [
+    "inning",
+    "top_bottom",
+    "is_late_inning",
+    "batting_order_start",
+    "is_top_order_start",
+    "is_cleanup_start",
+    "pitcher_is_starter",
+    "pitcher_times_through_order",
+    "pitcher_era_before_inning",
+    "opponent_starter_era",
+    "team_avg_runs_7d",
+    "opponent_avg_runs_7d",
+    "opponent_avg_runs_allowed_7d",
+    "team_run_scored_inning_rate_7d",
+    "opponent_run_allowed_inning_rate_7d",
+    "team_recent_2plus_inning_rate_7d",
+    "opponent_recent_2plus_allowed_rate_7d"
+  ],
+  "score_context_categorical_features": [
+    "score_state_before_inning"
+  ],
+  "score_context_numeric_features": [
+    "score_diff_before_inning",
+    "is_close_game",
+    "is_blowout"
+  ],
+  "lineup_strength_numeric_features": [
+    "next_3_batters_obp",
+    "next_3_batters_ops",
+    "next_3_batters_xbh_rate",
+    "next_4_batters_ops"
+  ],
+  "lineup_vs_pitcher_hand_numeric_features": [
+    "next_3_batters_vs_pitcher_hand_avg",
+    "next_3_batters_vs_pitcher_hand_ops",
+    "next_4_batters_vs_pitcher_hand_ops",
+    "next_3_batters_vs_pitcher_hand_xbh_rate"
+  ],
+  "lineup_diagnostic_features": [
+    "next_3_batters_known_count",
+    "next_4_batters_known_count",
+    "next_3_batters_vs_hand_known_count",
+    "next_4_batters_vs_hand_known_count"
+  ],
+  "target": "NO_RUN / RUN_SCORED",
+  "lineup_join_key": [
+    "game_date",
+    "stadium_id",
+    "top_bottom",
+    "bat_order"
+  ]
+}

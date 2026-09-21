@@ -1,0 +1,5 @@
+﻿variant,description,n_categorical_features,n_numeric_features,n_total_features
+score_context_28_features,Step1: score contextあり。,8,20,28
+lineup_vs_pitcher_hand_32_features,Step2A: score context + 相手投手左右に応じた次の3/4打者能力特徴量。,8,24,32
+step2b_run_expectancy_proxy_42_features,Step2B: score context + 先頭打者/次の3打者の出塁・四球・三振・長打期待proxy。,8,34,42
+step2a_plus_step2b_46_features,Step2A + Step2B: 投手左右対応打線強度 + 得点期待proxyを同時投入。,8,38,46

@@ -1,0 +1,45 @@
+{
+  "categorical_features": [
+    "batter_id",
+    "pitcher_id",
+    "stadium_id",
+    "Home_Away_id",
+    "batter_hand",
+    "pitcher_hand",
+    "previous_result1",
+    "previous_result2",
+    "previous_result3",
+    "previous_result4",
+    "previous_result5"
+  ],
+  "numeric_features": [
+    "bat_order",
+    "inning",
+    "top_bottom",
+    "out_count",
+    "runner1",
+    "runner2",
+    "runner3",
+    "score_diff",
+    "batter_avg",
+    "batter_ops",
+    "batter_obp",
+    "batter_slg",
+    "batter_iso",
+    "pitcher_era",
+    "pitcher_k9",
+    "pitcher_whip",
+    "pitcher_ops",
+    "vs_ops"
+  ],
+  "labels": [
+    "SINGLE",
+    "DOUBLE",
+    "TRIPLE",
+    "HR",
+    "BB",
+    "SO",
+    "HBP",
+    "OUT"
+  ]
+}

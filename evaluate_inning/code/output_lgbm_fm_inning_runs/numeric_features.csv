@@ -1,0 +1,15 @@
+﻿numeric_features
+inning
+top_bottom
+score_diff_before_inning
+team_runs_before_inning
+opponent_runs_before_inning
+team_avg_runs_7d
+opponent_avg_runs_7d
+pitcher_era_before_inning
+opponent_avg_runs_allowed_7d
+opponent_starter_era
+is_late_inning
+batting_order_start
+pitcher_bf_before_inning
+pitcher_runs_allowed_in_game

@@ -1,0 +1,18 @@
+========== 学習設定 (Parameters) ==========
+model_type: Standard LSTM (Dynamic Stats)
+input_size: 4
+hidden_size: 64
+num_epochs: 100
+learning_rate: 0.001
+json_dir: game_data_2025
+initial_stats: initial_stats_2024.csv
+device: cpu
+Features: [AVG, HR, SLG, OPS]
+Sample Count: 1716
+==========================================
+
+Epoch 20/100, MSE: 14.0845
+Epoch 40/100, MSE: 7.4061
+Epoch 60/100, MSE: 6.9586
+Epoch 80/100, MSE: 6.8982
+Epoch 100/100, MSE: 6.8825
